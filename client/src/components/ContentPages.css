@@ -1,32 +1,43 @@
 /* Shared styles for all content pages */
+/* Full Width, Responsive Design */
 
 /* Page Header */
 .page-header {
   background: linear-gradient(135deg, var(--dark-bg) 0%, var(--darker-bg) 100%);
-  padding: 80px 0 60px;
+  padding: 80px 20px 60px;
   text-align: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .page-header h1 {
-  font-size: 48px;
+  font-size: clamp(28px, 5vw, 48px);
   margin-bottom: 20px;
   color: var(--light-text);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
 }
 
 .page-header p {
-  font-size: 18px;
+  font-size: clamp(15px, 2.5vw, 18px);
   color: var(--gray-text);
-  max-width: 700px;
+  max-width: 800px;
   margin: 0 auto;
   line-height: 1.7;
+  padding: 0 20px;
 }
 
 /* Page Content */
 .page-content {
-  max-width: 900px;
+  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
-  padding: 60px 0;
+  padding: 60px 20px;
+  box-sizing: border-box;
 }
 
 /* Content Sections */
@@ -1139,5 +1150,168 @@
   .criteria-grid,
   .team-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================
+   ADDITIONAL RESPONSIVE STYLES
+   ========================================= */
+
+/* Tablet (768px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .page-header {
+    padding: 60px 20px 50px;
+  }
+
+  .page-content {
+    padding: 40px 20px;
+  }
+
+  .benefits-grid,
+  .advantages-grid,
+  .wallets-grid,
+  .security-grid,
+  .cryptos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile (< 768px) */
+@media (max-width: 768px) {
+  .page-header {
+    padding: 40px 15px 30px;
+  }
+
+  .page-header h1 {
+    font-size: 26px;
+    padding: 0 10px;
+  }
+
+  .page-header p {
+    font-size: 15px;
+    padding: 0 10px;
+  }
+
+  .page-content {
+    padding: 30px 15px;
+  }
+
+  .content-section {
+    margin-bottom: 40px;
+  }
+
+  .content-section h2 {
+    font-size: 22px;
+  }
+
+  .content-section h3 {
+    font-size: 18px;
+  }
+
+  .content-section p {
+    font-size: 15px;
+  }
+
+  /* All grids single column on mobile */
+  .benefits-grid,
+  .advantages-grid,
+  .wallets-grid,
+  .security-grid,
+  .considerations-grid,
+  .innovations-grid,
+  .conditions-grid,
+  .restrictions-grid,
+  .bonus-types-grid,
+  .variants-grid,
+  .bonus-grid,
+  .cryptos-grid,
+  .resources-grid,
+  .blockchains-grid,
+  .values-grid,
+  .criteria-grid,
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  /* Cards padding reduction */
+  .benefit-card,
+  .advantage-card,
+  .wallet-card,
+  .security-card,
+  .consideration-card,
+  .innovation-card,
+  .condition-card,
+  .restriction-card,
+  .bonus-type-card,
+  .variant-card,
+  .bonus-card,
+  .crypto-card,
+  .resource-card {
+    padding: 20px;
+  }
+
+  /* Casino cards stack on mobile */
+  .casino-card,
+  .poker-site-card {
+    padding: 20px;
+  }
+
+  .casino-rank,
+  .site-rank {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .casino-info h3,
+  .site-info h3 {
+    font-size: 18px;
+  }
+}
+
+/* Small Mobile (< 480px) */
+@media (max-width: 480px) {
+  .page-header {
+    padding: 30px 10px 25px;
+  }
+
+  .page-header h1 {
+    font-size: 24px;
+  }
+
+  .page-content {
+    padding: 25px 10px;
+  }
+
+  .content-section {
+    margin-bottom: 30px;
+  }
+
+  .benefit-card,
+  .advantage-card,
+  .wallet-card,
+  .casino-card {
+    padding: 15px;
+  }
+
+  .contact-form {
+    padding: 20px 15px;
+  }
+}
+
+/* Large Screens (> 1400px) */
+@media (min-width: 1400px) {
+  .page-content {
+    max-width: 1400px;
+  }
+
+  .page-header h1 {
+    font-size: 52px;
+  }
+
+  .page-header p {
+    font-size: 20px;
+    max-width: 900px;
   }
 }

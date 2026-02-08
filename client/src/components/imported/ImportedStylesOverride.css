@@ -1,54 +1,50 @@
 /* Global Overrides for Imported Elementor Pages */
+/* Full Width, No Blank Spaces, Responsive Design */
 
 /* =========================================
-   1. GLOBAL THEME & RESET
+   1. GLOBAL RESET & FULL WIDTH
    ========================================= */
+
+/* Ensure html and body are full width */
+html, body {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
+}
 
 /* Force Dark Theme on Body and Wrapper */
 body,
 .imported-page-wrapper {
     background-color: var(--dark-bg, #0f1115) !important;
     color: var(--light-text, #ffffff) !important;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
 }
 
-/* Override Elementor's white backgrounds */
-.elementor-section,
-.elementor-column,
-.elementor-widget,
-.e-con,
-.elementor-element {
-    background-color: transparent !important;
-}
-
-/* Force full width on all containers */
-.elementor,
-.elementor-section,
-.e-con,
-.e-con-boxed,
-.elementor-section-boxed,
-.elementor-container {
-    max-width: 100% !important;
+/* Main App container - full width */
+.App {
     width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
 }
 
-/* Remove Elementor's default container width limits */
-.e-con-inner,
-.elementor-container {
-    max-width: 1200px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    padding-left: 20px !important;
-    padding-right: 20px !important;
+/* Imported page wrapper - CRITICAL: Full width with no gaps */
+.imported-page-wrapper {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin-left: calc(-50vw + 50%) !important;
+    margin-right: calc(-50vw + 50%) !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
 }
 
-/* Ensure page wrapper is full width */
-.imported-page-wrapper .page-content,
-.imported-page-wrapper .elementor {
+/* Page content container */
+.imported-page-wrapper .page-content {
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 !important;
@@ -56,7 +52,69 @@ body,
 }
 
 /* =========================================
-   2. TYPOGRAPHY (Match ContentPages.css)
+   2. ELEMENTOR FULL WIDTH FIXES
+   ========================================= */
+
+/* Override ALL Elementor white backgrounds */
+.elementor-section,
+.elementor-column,
+.elementor-widget,
+.elementor-element,
+.e-con,
+.e-con-inner,
+.e-con-boxed,
+.elementor-section-boxed,
+.elementor-container,
+.elementor-row,
+.elementor-column-wrap,
+.elementor-widget-wrap {
+    background-color: transparent !important;
+}
+
+/* Force ALL containers to full width */
+.elementor,
+.elementor-inner,
+.elementor-section,
+.elementor-section-wrap,
+.elementor-section-boxed,
+.elementor-section-full_width,
+.e-con,
+.e-con-boxed,
+.e-con-full,
+.elementor-container,
+.elementor-row {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    box-sizing: border-box !important;
+}
+
+/* Inner content containers - centered with max-width */
+.e-con-inner,
+.elementor-container {
+    max-width: 1400px !important;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    box-sizing: border-box !important;
+}
+
+/* Remove any forced widths from inline styles */
+.elementor-section[style*="width"],
+.elementor-container[style*="width"],
+.e-con[style*="width"],
+.e-con-inner[style*="width"] {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* =========================================
+   3. TYPOGRAPHY
    ========================================= */
 
 /* Headings */
@@ -68,22 +126,26 @@ body,
 .imported-page-wrapper h6,
 .elementor-heading-title {
     color: var(--light-text, #ffffff) !important;
-    font-family: inherit;
-    /* Use site font */
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.3;
+    word-wrap: break-word;
 }
 
-.imported-page-wrapper h1 {
-    font-size: 32px;
+.imported-page-wrapper h1,
+.elementor-size-xxl {
+    font-size: clamp(28px, 5vw, 42px) !important;
     margin-bottom: 20px;
 }
 
-.imported-page-wrapper h2 {
-    font-size: 28px;
+.imported-page-wrapper h2,
+.elementor-size-xl {
+    font-size: clamp(24px, 4vw, 32px) !important;
     margin-bottom: 18px;
 }
 
-.imported-page-wrapper h3 {
-    font-size: 24px;
+.imported-page-wrapper h3,
+.elementor-size-large {
+    font-size: clamp(20px, 3vw, 26px) !important;
     margin-bottom: 15px;
 }
 
@@ -91,10 +153,13 @@ body,
 .imported-page-wrapper p,
 .imported-page-wrapper li,
 .imported-page-wrapper span,
-.elementor-text-editor {
+.imported-page-wrapper div,
+.elementor-text-editor,
+.elementor-widget-text-editor {
     color: var(--gray-text, #a0aec0) !important;
-    line-height: 1.6;
-    font-size: 16px;
+    line-height: 1.7;
+    font-size: clamp(14px, 2.5vw, 16px);
+    word-wrap: break-word;
 }
 
 /* Links */
@@ -109,127 +174,401 @@ body,
 }
 
 /* =========================================
-   3. LAYOUT & RESPONSIVENESS
+   4. IMAGES - FULL WIDTH & RESPONSIVE
    ========================================= */
 
-/* Container Width Fixes */
-.elementor-section,
-.elementor-container,
-.e-con,
-.e-con-inner,
-.elementor-row {
-    max-width: 100vw !important;
+img,
+.elementor-image img,
+.elementor-widget-image img,
+.wp-post-image {
+    max-width: 100% !important;
+    width: auto !important;
+    height: auto !important;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Hero/banner images - full width */
+.elementor-section-full_width img,
+.e-con-full img {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* =========================================
+   5. BUTTONS
+   ========================================= */
+
+.elementor-button,
+.elementor-button-link,
+a.elementor-button {
+    background: linear-gradient(135deg, var(--primary-color, #f7931a), #e08f1a) !important;
+    color: white !important;
+    border-radius: 8px !important;
+    padding: 12px 28px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase;
+    border: none !important;
+    display: inline-block;
+    text-align: center;
+    transition: all 0.3s ease !important;
+    font-size: clamp(12px, 2vw, 14px) !important;
+}
+
+.elementor-button:hover,
+.elementor-button-link:hover {
+    background: linear-gradient(135deg, #e08f1a, #c77a15) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(247, 147, 26, 0.3);
+}
+
+/* =========================================
+   6. TABLES - RESPONSIVE
+   ========================================= */
+
+table {
+    width: 100% !important;
+    max-width: 100% !important;
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--light-text, #ffffff);
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    display: block;
+    overflow-x: auto;
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: left;
+    white-space: nowrap;
+}
+
+th {
+    background: rgba(247, 147, 26, 0.1);
+    font-weight: 600;
+}
+
+/* =========================================
+   7. CARDS & BOXES
+   ========================================= */
+
+.elementor-widget-container {
     width: 100% !important;
     box-sizing: border-box !important;
 }
 
-/* Restrict content width for readability on large screens */
-.page-content,
-.elementor-widget-text-editor,
-.entry-content {
-    max-width: 1200px;
-    /* Or 900px to match ContentPages.css if prefer narrow */
-    margin-left: auto !important;
-    margin-right: auto !important;
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-}
-
-/* Remove fixed widths from inline styles */
-[style*="width"] {
-    width: auto !important;
-    max-width: 100% !important;
-}
-
-/* Fix Elementor's specific boxed layouts that cause overflow */
-.e-con-boxed {
-    width: 100% !important;
-    max-width: 100% !important;
-}
-
-/* Images */
-img {
-    max-width: 100% !important;
-    height: auto !important;
-    display: block;
+/* Casino cards, info boxes, etc */
+.elementor-flip-box,
+.elementor-icon-box,
+.elementor-testimonial,
+.elementor-cta {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* =========================================
-   4. SPECIFIC COMPONENT FIXES
+   8. GRIDS & COLUMNS - RESPONSIVE
    ========================================= */
 
-/* Tables */
-table {
+/* Elementor columns */
+.elementor-row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    width: 100% !important;
+}
+
+.elementor-column {
     width: 100% !important;
     max-width: 100% !important;
-    background: rgba(255, 255, 255, 0.05);
-    /* Match card style */
-    color: var(--light-text, #ffffff);
-    border-collapse: collapse;
+    box-sizing: border-box !important;
 }
 
-th,
-td {
-    padding: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+/* Grid layouts */
+.elementor-grid,
+.elementor-posts-container {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+    gap: 20px !important;
+    width: 100% !important;
 }
 
-/* Buttons */
-.elementor-button {
-    background-color: var(--primary-color, #f7931a) !important;
-    color: white !important;
-    border-radius: 8px !important;
-    padding: 12px 24px !important;
-    font-weight: bold !important;
-    text-transform: uppercase;
-    border: none !important;
+/* =========================================
+   9. SPACING FIXES - REMOVE BLANK SPACES
+   ========================================= */
+
+/* Remove excessive padding/margins */
+.elementor-section {
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+    margin: 0 !important;
 }
 
-.elementor-button:hover {
-    background-color: #e68a15 !important;
-    transform: translateY(-2px);
+/* Remove spacers that create blank space */
+.elementor-widget-spacer {
+    display: none !important;
 }
 
-/* Cards / Boxes (Simulate .card style on Elementor inner sections) */
-.elementor-inner-section,
-.elementor-widget-container {
-    /* Optional: if you want to frame content like cards */
-    /* background: rgba(255, 255, 255, 0.02); */
+/* Reduce widget gaps */
+.elementor-widget:not(:last-child) {
+    margin-bottom: 15px !important;
 }
 
-/* Navbar / Header specifics */
-.elementor-location-header {
+/* Remove empty elements */
+.elementor-element:empty {
+    display: none !important;
+}
+
+/* =========================================
+   10. HEADER & NAVIGATION
+   ========================================= */
+
+.elementor-location-header,
+.elementor-widget-nav-menu {
     background: linear-gradient(135deg, var(--dark-bg, #0f1115) 0%, #1a1d24 100%) !important;
-    padding: 10px 0;
+    width: 100% !important;
 }
 
-/* Mobile Menu Fixes */
+.elementor-nav-menu a {
+    color: white !important;
+    font-weight: 500;
+}
+
+.elementor-nav-menu a:hover {
+    color: var(--primary-color, #f7931a) !important;
+}
+
+/* =========================================
+   11. FOOTER
+   ========================================= */
+
+.elementor-location-footer {
+    background-color: #0b0c10 !important;
+    width: 100% !important;
+    margin-top: auto;
+}
+
+/* =========================================
+   12. DIVIDERS & SEPARATORS
+   ========================================= */
+
+.elementor-divider,
+.elementor-divider-separator {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    width: 100% !important;
+}
+
+/* =========================================
+   13. FORMS
+   ========================================= */
+
+.elementor-form input,
+.elementor-form textarea,
+.elementor-form select {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    color: white !important;
+    padding: 12px 15px !important;
+    border-radius: 6px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.elementor-form input:focus,
+.elementor-form textarea:focus {
+    border-color: var(--primary-color, #f7931a) !important;
+    outline: none !important;
+}
+
+/* =========================================
+   14. ICONS & RATINGS
+   ========================================= */
+
+.elementor-icon,
+.elementor-star-rating {
+    color: var(--primary-color, #f7931a) !important;
+}
+
+.elementor-icon i {
+    color: inherit !important;
+}
+
+/* =========================================
+   15. MOBILE RESPONSIVENESS (< 768px)
+   ========================================= */
+
 @media (max-width: 768px) {
+    /* Full width on mobile */
+    .imported-page-wrapper,
+    .imported-page-wrapper .page-content,
+    .elementor-section,
+    .elementor-container,
+    .e-con,
+    .e-con-inner {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+    /* Stack columns on mobile */
+    .elementor-row {
+        flex-direction: column !important;
+    }
+
+    .elementor-column {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-bottom: 20px !important;
+    }
+
+    /* Reduce section padding on mobile */
+    .elementor-section {
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+    }
+
+    /* Smaller headings on mobile */
+    .imported-page-wrapper h1 {
+        font-size: 26px !important;
+    }
+
+    .imported-page-wrapper h2 {
+        font-size: 22px !important;
+    }
+
+    .imported-page-wrapper h3 {
+        font-size: 18px !important;
+    }
+
+    /* Full width buttons on mobile */
+    .elementor-button {
+        width: 100% !important;
+        text-align: center !important;
+        padding: 14px 20px !important;
+    }
+
+    /* Grid single column on mobile */
+    .elementor-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Mobile menu */
     .elementor-nav-menu--dropdown {
         background-color: var(--dark-bg, #0f1115) !important;
         border: 1px solid rgba(255, 255, 255, 0.1);
+        width: 100% !important;
     }
 
     .elementor-nav-menu--dropdown a {
         color: white !important;
+        padding: 12px 15px !important;
+        display: block !important;
+    }
+
+    /* Tables scroll on mobile */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    /* Cards full width on mobile */
+    .elementor-flip-box,
+    .elementor-icon-box,
+    .elementor-testimonial {
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
     }
 }
 
 /* =========================================
-   5. UTILITY & CLEANUP
+   16. TABLET RESPONSIVENESS (768px - 1024px)
    ========================================= */
 
-/* Hide standard whitespace that Elementor adds */
-.elementor-spacer {
-    display: none !important;
+@media (min-width: 769px) and (max-width: 1024px) {
+    .e-con-inner,
+    .elementor-container {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    .elementor-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .elementor-column {
+        width: 50% !important;
+    }
 }
 
-.elementor-divider {
-    border-color: rgba(255, 255, 255, 0.1) !important;
+/* =========================================
+   17. LARGE SCREENS (> 1400px)
+   ========================================= */
+
+@media (min-width: 1400px) {
+    .e-con-inner,
+    .elementor-container {
+        max-width: 1400px !important;
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+    }
 }
 
-/* Fix vertical padding */
+/* =========================================
+   18. ANIMATIONS & TRANSITIONS
+   ========================================= */
+
+.elementor-element {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Disable animations on mobile for performance */
+@media (max-width: 768px) {
+    .elementor-element,
+    .elementor-widget {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* =========================================
+   19. SCROLL & OVERFLOW FIXES
+   ========================================= */
+
+/* Prevent horizontal scroll */
+.imported-page-wrapper,
+.elementor,
 .elementor-section {
-    padding-top: 20px !important;
-    padding-bottom: 20px !important;
+    overflow-x: hidden !important;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* =========================================
+   20. PRINT STYLES
+   ========================================= */
+
+@media print {
+    .imported-page-wrapper {
+        background: white !important;
+        color: black !important;
+    }
+
+    .imported-page-wrapper h1,
+    .imported-page-wrapper h2,
+    .imported-page-wrapper h3 {
+        color: black !important;
+    }
+
+    .elementor-button {
+        display: none !important;
+    }
 }
