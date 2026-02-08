@@ -1,0 +1,54 @@
+/* Global Overrides for Imported Elementor Pages */
+
+/* Ensure the wrapper takes full width */
+.imported-page-wrapper {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden;
+}
+
+/* Force top-level Elementor containers to be full width */
+.elementor.elementor-29 .e-con.e-parent {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Specific Hero Section Fix (ID from ImportedHome.js) */
+.elementor-element-3907868f {
+    width: 100% !important;
+    max-width: 100% !important;
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+/* Ensure inner container is centered but constrained */
+.elementor-element-3907868f>.e-con-inner {
+    max-width: 1200px;
+    /* Or whatever standard width */
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Fix background image if it uses an img tag with absolute position */
+.elementor-element-4d6a52f6 img {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .elementor-heading-title {
+        font-size: 1.8rem !important;
+        line-height: 1.2 !important;
+    }
+
+    .elementor-element-3907868f {
+        padding: 20px 0 !important;
+    }
+}
+
+/* General cleanups */
+body {
+    overflow-x: hidden;
+}

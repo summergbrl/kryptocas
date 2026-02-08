@@ -1,0 +1,140 @@
+.casinos-page {
+  min-height: 100vh;
+}
+
+.page-header {
+  background: linear-gradient(135deg, #1a1a2e 0%, #0f0f1e 100%);
+  padding: 60px 0;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.page-header h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+  color: var(--light-text);
+}
+
+.page-header p {
+  font-size: 18px;
+  color: var(--gray-text);
+}
+
+.casinos-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-bottom: 60px;
+}
+
+.casino-item {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 30px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.casino-item:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 10px 30px rgba(247, 147, 26, 0.2);
+}
+
+.casino-rank {
+  font-size: 48px;
+  font-weight: 900;
+  color: var(--primary-color);
+  min-width: 80px;
+  text-align: center;
+}
+
+.casino-main {
+  flex: 1;
+}
+
+.casino-info {
+  margin-bottom: 20px;
+}
+
+.casino-info h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: var(--light-text);
+}
+
+.rating-large {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.stars {
+  color: var(--primary-color);
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.rating-value {
+  color: var(--gray-text);
+  font-weight: 600;
+}
+
+.casino-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.detail-label {
+  font-size: 13px;
+  color: var(--gray-text);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.detail-value {
+  font-size: 16px;
+  color: var(--light-text);
+  font-weight: 500;
+}
+
+.casino-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-width: 200px;
+}
+
+.casino-actions .btn {
+  width: 100%;
+}
+
+@media (max-width: 968px) {
+  .casino-item {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .casino-rank {
+    font-size: 36px;
+    min-width: auto;
+  }
+
+  .casino-actions {
+    min-width: auto;
+  }
+
+  .page-header h1 {
+    font-size: 32px;
+  }
+}

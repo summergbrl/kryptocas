@@ -1,0 +1,130 @@
+.featured-casinos {
+  padding: 80px 0;
+  background: var(--dark-bg);
+}
+
+.featured-casinos h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 15px;
+  color: var(--light-text);
+}
+
+.casinos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.casino-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 30px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.casino-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--primary-color);
+  box-shadow: 0 15px 40px rgba(247, 147, 26, 0.2);
+}
+
+.casino-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.casino-header h3 {
+  font-size: 24px;
+  color: var(--light-text);
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(247, 147, 26, 0.1);
+  padding: 5px 12px;
+  border-radius: 20px;
+}
+
+.rating .star {
+  color: var(--primary-color);
+  font-size: 18px;
+}
+
+.rating span:last-child {
+  color: var(--light-text);
+  font-weight: 600;
+}
+
+.casino-bonus {
+  background: linear-gradient(135deg, rgba(247, 147, 26, 0.2), rgba(224, 143, 26, 0.1));
+  border: 1px solid rgba(247, 147, 26, 0.3);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bonus-label {
+  font-size: 13px;
+  color: var(--gray-text);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.bonus-value {
+  font-size: 20px;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.casino-features {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 25px;
+  flex: 1;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--gray-text);
+}
+
+.checkmark {
+  color: var(--success-color);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.casino-btn {
+  width: 100%;
+  margin-top: auto;
+}
+
+@media (max-width: 768px) {
+  .featured-casinos {
+    padding: 50px 0;
+  }
+
+  .featured-casinos h2 {
+    font-size: 28px;
+  }
+
+  .casinos-grid {
+    grid-template-columns: 1fr;
+  }
+}
