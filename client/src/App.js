@@ -2,7 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import './components/imported/ImportedStylesOverride.css';
-import NewHomePage from './components/NewHomePage';
+// import NewHomePage from './components/NewHomePage';
 import NewPrivacyPolicyPage from './components/NewPrivacyPolicyPage';
 import ResponsibleGamingPage from './components/ResponsibleGamingPage';
 import EthereumCasinosPage from './components/EthereumCasinosPage';
