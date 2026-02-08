@@ -191,23 +191,50 @@ const ImportedHome = () => {
     ];
 
     return (
-        <div className="imported-page-wrapper">
+        <div className="imported-page-wrapper" style={{ background: '#0f1115', minHeight: '100vh', width: '100%' }}>
             <Helmet>
                 <title>Deutsche Krypto Casinos 2026 – Sicher und zuverlässig</title>
                 <meta name="description" content="Die besten Krypto Casinos für 2026 im Vergleich. Sichern Sie sich exklusive Boni, Freispiele und spielen Sie sicher mit Bitcoin & Co." />
             </Helmet>
 
-            <div className="page-content">
-                {/* Hero Section */}
-                <div className="content-section" style={{ position: 'relative', textAlign: 'center', marginBottom: '60px' }}>
-                    <div style={{ position: 'absolute', top: '-100px', left: '50%', transform: 'translateX(-50%)', opacity: 0.1, zIndex: 0 }}>
-                        <img src="/imported/images/flare1-1_fc4fb261.webp" alt="" width="800" height="800" />
-                    </div>
+            {/* Hero Section - Full Width Dark */}
+            <div style={{
+                background: 'linear-gradient(135deg, #0f1115 0%, #1a1d24 100%)',
+                padding: '80px 20px 60px',
+                position: 'relative',
+                overflow: 'hidden',
+                width: '100%'
+            }}>
+                <div style={{
+                    position: 'absolute',
+                    top: '-50px',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    opacity: 0.05,
+                    zIndex: 0,
+                    pointerEvents: 'none'
+                }}>
+                    <img src="/imported/images/flare1-1_fc4fb261.webp" alt="" width="800" height="800" />
+                </div>
 
-                    <h1 style={{ position: 'relative', zIndex: 1, marginBottom: '20px' }}>Die besten Krypto Casinos 2026: Vergleich & Test</h1>
+                <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 1, textAlign: 'center' }}>
+                    <h1 style={{
+                        fontSize: 'clamp(28px, 5vw, 48px)',
+                        marginBottom: '20px',
+                        color: '#ffffff',
+                        fontWeight: '700',
+                        lineHeight: '1.2'
+                    }}>
+                        Die besten Krypto Casinos 2026: Vergleich & Test
+                    </h1>
 
-                    <div style={{ maxWidth: '800px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
-                        <p>
+                    <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+                        <p style={{
+                            fontSize: 'clamp(14px, 2vw, 18px)',
+                            lineHeight: '1.7',
+                            color: '#a0aec0',
+                            marginBottom: '0'
+                        }}>
                             Die besten Krypto Casinos für 2026? Krypto Casinos ermöglichen es Ihnen, schnell, sicher und anonym einzuzahlen,
                             um Ihre Lieblingsspiele zu spielen. Wir haben diese Plattformen gründlich getestet – Einzahlungen, Auszahlungen,
                             Bonusbedingungen, den gesamten Prozess. Das ist keine recycelte Liste. Unser Team hat jedes Krypto Casino analysiert,
@@ -215,31 +242,85 @@ const ImportedHome = () => {
                         </p>
                     </div>
 
-                    <div style={{ marginTop: '30px', position: 'relative', zIndex: 1 }}>
-                        <a href="#casinos-list" className="elementor-button" style={{ display: 'inline-flex', alignItems: 'center', gap: '10px' }}>
+                    <div style={{ marginTop: '30px' }}>
+                        <a href="#casinos-list" className="elementor-button" style={{
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            gap: '10px',
+                            background: 'linear-gradient(135deg, #f7931a 0%, #ff6b35 100%)',
+                            color: '#fff',
+                            padding: '12px 30px',
+                            borderRadius: '8px',
+                            textDecoration: 'none',
+                            fontWeight: '600',
+                            transition: 'all 0.3s ease'
+                        }}>
                             <span>Entdecken Sie Casinos</span>
-                            <svg aria-hidden="true" className="e-font-icon-svg e-fas-angle-right" viewBox="0 0 256 512" xmlns="http://www.w3.org/2000/svg" height="14" fill="currentColor">
+                            <svg aria-hidden="true" viewBox="0 0 256 512" xmlns="http://www.w3.org/2000/svg" height="14" fill="currentColor">
                                 <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path>
                             </svg>
                         </a>
                     </div>
                 </div>
+            </div>
 
-                {/* Casinos List Section */}
-                <div id="casinos-list" className="content-section">
-                    <h2 style={{ textAlign: 'center', marginBottom: '40px' }}>
+            {/* Casinos List Section - Full Width */}
+            <div id="casinos-list" style={{
+                background: '#0f1115',
+                padding: '60px 20px',
+                width: '100%'
+            }}>
+                <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+                    <h2 style={{
+                        textAlign: 'center',
+                        marginBottom: '40px',
+                        fontSize: 'clamp(24px, 4vw, 36px)',
+                        color: '#ffffff',
+                        fontWeight: '700'
+                    }}>
                         <b>Beste Deutsche Krypto Casinos</b> - Februar 2026
                     </h2>
 
-                    <div className="casinos-list">
+                    <div className="casinos-list" style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        gap: '25px'
+                    }}>
                         {casinos.map((casino, index) => (
-                            <div key={casino.id} className="casino-card" style={{ flexDirection: 'column', padding: '0' }}>
+                            <div key={casino.id} style={{
+                                background: 'rgba(255, 255, 255, 0.05)',
+                                border: '1px solid rgba(255, 255, 255, 0.1)',
+                                borderRadius: '12px',
+                                overflow: 'hidden',
+                                transition: 'all 0.3s ease'
+                            }}>
                                 {/* Main Card Content */}
-                                <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', padding: '20px', gap: '20px', alignItems: 'center' }}>
+                                <div style={{
+                                    display: 'flex',
+                                    flexDirection: 'row',
+                                    flexWrap: 'wrap',
+                                    padding: '20px',
+                                    gap: '20px',
+                                    alignItems: 'center'
+                                }}>
 
                                     {/* Logo & Rank */}
                                     <div style={{ display: 'flex', alignItems: 'center', gap: '15px', flex: '1 1 200px' }}>
-                                        <div className="casino-rank" style={{ width: '40px', height: '40px', fontSize: '16px' }}>{index + 1}</div>
+                                        <div style={{
+                                            width: '50px',
+                                            height: '50px',
+                                            fontSize: '20px',
+                                            background: '#f7931a',
+                                            borderRadius: '50%',
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            justifyContent: 'center',
+                                            fontWeight: '700',
+                                            color: '#fff',
+                                            flexShrink: 0
+                                        }}>
+                                            {index + 1}
+                                        </div>
                                         <div style={{ background: '#1a202c', padding: '10px', borderRadius: '8px', minWidth: '120px', textAlign: 'center' }}>
                                             <img src={casino.logo} alt={`${casino.name} Logo`} style={{ maxHeight: '50px', maxWidth: '100%', objectFit: 'contain' }} />
                                         </div>
@@ -265,12 +346,23 @@ const ImportedHome = () => {
                                         <p style={{ color: '#f7931a', fontWeight: '800', textTransform: 'uppercase', marginBottom: '5px', fontSize: '16px' }}>
                                             {casino.bonus}
                                         </p>
-                                        {casino.note && <p style={{ fontSize: '12px', color: '#a0aec0' }}>{casino.note}</p>}
+                                        {casino.note && <p style={{ fontSize: '12px', color: '#a0aec0', marginBottom: '0' }}>{casino.note}</p>}
                                     </div>
 
                                     {/* Action Button */}
                                     <div style={{ flex: '0 0 auto', width: '100%', maxWidth: '200px', margin: '0 auto' }}>
-                                        <a href={casino.link} target="_blank" rel="nofollow sponsored noreferrer" className="elementor-button" style={{ width: '100%', textAlign: 'center', justifyContent: 'center' }}>
+                                        <a href={casino.link} target="_blank" rel="nofollow sponsored noreferrer" style={{
+                                            display: 'block',
+                                            width: '100%',
+                                            textAlign: 'center',
+                                            background: 'linear-gradient(135deg, #f7931a 0%, #ff6b35 100%)',
+                                            color: '#fff',
+                                            padding: '12px 24px',
+                                            borderRadius: '8px',
+                                            textDecoration: 'none',
+                                            fontWeight: '600',
+                                            transition: 'all 0.3s ease'
+                                        }}>
                                             Spiel Jetzt
                                         </a>
                                     </div>
@@ -289,7 +381,8 @@ const ImportedHome = () => {
                                             alignItems: 'center',
                                             gap: '5px',
                                             fontSize: '14px',
-                                            padding: '0'
+                                            padding: '0',
+                                            fontFamily: 'inherit'
                                         }}
                                     >
                                         {expandedIds.includes(casino.id) ? 'Weniger Info' : 'Mehr Info'}
