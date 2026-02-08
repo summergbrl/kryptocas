@@ -1,8 +1,8 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
-import './components/imported/ImportedStylesOverride.css';
-// import ImportedHomePage from './components/imported/ImportedHomePage';
+
+import NewHomePage from './components/NewHomePage';
 import NewPrivacyPolicyPage from './components/NewPrivacyPolicyPage';
 import ResponsibleGamingPage from './components/ResponsibleGamingPage';
 import EthereumCasinosPage from './components/EthereumCasinosPage';
@@ -23,7 +23,6 @@ import KontaktPage from './components/KontaktPage';
 
 // --- MIGRATED IMPORTS ---
 // Trigger HMR update
-import ImportedHome from './components/imported/ImportedHome';
 import ImportedDatenschutzPage from './components/imported/ImportedDatenschutzPage';
 import ImportedTestsMbitPage from './components/imported/ImportedTestsMbitPage';
 import ImportedTestsArcanebetPage from './components/imported/ImportedTestsArcanebetPage';
@@ -99,6 +98,7 @@ import ImportedKryptowissenMobileKryptoCasinos2025Page from './components/import
 import ImportedKryptowissenLayer2LoesungenInKryptocasinosSchnellerUndEinfacherSpielenPage from './components/imported/ImportedKryptowissenLayer2LoesungenInKryptocasinosSchnellerUndEinfacherSpielenPage';
 import ImportedKryptowissenDerKostenloseTestWarumDeutscheSpielerNieEinzahlenBevorSieTestenPage from './components/imported/ImportedKryptowissenDerKostenloseTestWarumDeutscheSpielerNieEinzahlenBevorSieTestenPage';
 import ImportedKryptowissenKryptoCasinoBoni2026TrendsPage from './components/imported/ImportedKryptowissenKryptoCasinoBoni2026TrendsPage';
+
 // ------------------------
 
 
@@ -107,7 +107,8 @@ function App() {
     <div className="App">
       <Routes>
         {/* --- MIGRATED ROUTES --- */}
-        <Route path="/" element={<ImportedHome />} />
+        <Route path="/" element={<NewHomePage />} />
+
         <Route path="/datenschutz/" element={<ImportedDatenschutzPage />} />
         <Route path="/tests/mbit/" element={<ImportedTestsMbitPage />} />
         <Route path="/tests/arcanebet/" element={<ImportedTestsArcanebetPage />} />

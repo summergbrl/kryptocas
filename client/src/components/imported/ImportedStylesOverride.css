@@ -343,6 +343,72 @@ th {
     color: var(--primary-color, #f7931a) !important;
 }
 
+/* Navigation Arrow / Chevron Icons Fix */
+/* Global rule for this icon to prevent it from ever being huge */
+svg.fa-svg-chevron-down,
+.e-fas-chevron-down,
+.elementor-nav-menu .sub-arrow svg,
+.elementor-nav-menu svg.fa-svg-chevron-down,
+.elementor-nav-menu .e-font-icon-svg {
+    width: 1em !important;
+    height: 1em !important;
+    max-width: 14px !important;
+    max-height: 14px !important;
+    fill: currentColor !important;
+    vertical-align: middle !important;
+    display: inline-block !important;
+    margin-left: 5px !important;
+}
+
+@media (max-width: 768px) {
+
+    svg.fa-svg-chevron-down,
+    .e-fas-chevron-down,
+    .elementor-nav-menu .sub-arrow svg,
+    .elementor-nav-menu svg.fa-svg-chevron-down,
+    .elementor-nav-menu .e-font-icon-svg {
+        width: 14px !important;
+        height: 14px !important;
+        max-width: 14px !important;
+    }
+}
+
+/* Desktop Navigation Dropdowns */
+.elementor-nav-menu--main .sub-menu,
+.elementor-nav-menu--dropdown.elementor-nav-menu--dropdown {
+    background: linear-gradient(135deg, #1a1d24 0%, #0f1115 100%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    padding: 0 !important;
+    margin: 0 !important;
+    min-width: 220px !important;
+}
+
+.elementor-nav-menu--main .sub-menu a,
+.elementor-nav-menu--dropdown a {
+    color: white !important;
+    padding: 12px 20px !important;
+    display: block !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.elementor-nav-menu--main .sub-menu a:hover,
+.elementor-nav-menu--dropdown a:hover {
+    background: rgba(247, 147, 26, 0.1) !important;
+    color: var(--primary-color, #f7931a) !important;
+    padding-left: 25px !important;
+}
+
+/* Nested submenu styling */
+.elementor-nav-menu--main .sub-menu .sub-menu {
+    background: #0f1115 !important;
+}
+
+.elementor-nav-menu--main .sub-menu .sub-menu a {
+    padding-left: 30px !important;
+}
+
 /* =========================================
    11. FOOTER
    ========================================= */
@@ -526,6 +592,34 @@ th {
         color: white !important;
         padding: 12px 15px !important;
         display: block !important;
+    }
+
+    /* Fix submenu background and spacing */
+    .elementor-nav-menu--dropdown .sub-menu {
+        background: transparent !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .elementor-nav-menu--dropdown .sub-menu a {
+        padding-left: 30px !important;
+        background: rgba(255, 255, 255, 0.05) !important;
+        border-left: 2px solid var(--primary-color, #f7931a);
+    }
+
+    .elementor-nav-menu--dropdown .sub-menu .sub-menu a {
+        padding-left: 45px !important;
+        background: rgba(255, 255, 255, 0.03) !important;
+    }
+
+    /* Hide submenu by default on mobile */
+    .elementor-nav-menu--dropdown .sub-menu {
+        display: none;
+    }
+
+    .elementor-nav-menu--dropdown .menu-item:hover>.sub-menu,
+    .elementor-nav-menu--dropdown .menu-item.current-menu-item>.sub-menu {
+        display: block;
     }
 
     /* Tables scroll on mobile */
@@ -723,9 +817,11 @@ html {
     /* 3. Bonus Text */
     .maintablerow>.e-con-full:nth-child(4) {
         order: 3;
-        font-weight: bold !important;
-        font-size: 1.1em !important;
-        margin-bottom: 15px !important;
+        font-weight: 700 !important;
+        font-size: 18px !important;
+        margin-bottom: 20px !important;
+        color: #f7931a !important;
+        /* Gold for bonus */
     }
 
     /* 4. Max Payout */
@@ -749,6 +845,16 @@ html {
     .maintablerow>.e-con-full:nth-child(6) {
         order: 6;
         margin-top: 10px !important;
+        width: 100% !important;
+    }
+
+    /* Ensure the toggle title itself is full width and looks like a secondary button */
+    .maintablerow .elementor-toggle-title {
+        text-align: center !important;
+        background: rgba(255, 255, 255, 0.05) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        padding: 12px !important;
+        font-size: 14px !important;
     }
 
     /* Button Full Width */
@@ -756,6 +862,13 @@ html {
         width: 100% !important;
         padding: 16px !important;
         font-size: 16px !important;
+        margin-bottom: 0 !important;
+    }
+
+    /* Remove borders on mobile children to keep card clean */
+    .maintablerow>.e-con-full {
+        border: none !important;
+        padding: 0 !important;
     }
 
     /* Center Stars on Mobile */

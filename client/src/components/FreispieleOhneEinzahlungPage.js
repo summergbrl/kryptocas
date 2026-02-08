@@ -23,7 +23,7 @@ function FreispieleOhneEinzahlungPage() {
     },
     {
       title: 'Spielbeschränkungen',
-      description: 'Freispiele sind oft nur für bestimmte Slots wie "Book of Dead" oder "Starburst" verfügbar.',
+      description: 'Freispiele sind oft nur für bestimmte Slots wie"Book of Dead" oder"Starburst" verfügbar.',
     },
     {
       title: 'Zeitliche Begrenzungen',
@@ -44,7 +44,7 @@ function FreispieleOhneEinzahlungPage() {
     {
       step: 2,
       title: 'Registrierung',
-      description: 'Klicken Sie auf "Registrieren" und füllen Sie das Anmeldeformular mit korrekten Daten aus.',
+      description: 'Klicken Sie auf"Registrieren" und füllen Sie das Anmeldeformular mit korrekten Daten aus.',
     },
     {
       step: 3,

@@ -39,7 +39,7 @@ const EnglishContent = () => {
                 <p>
                     English-speaking players in Germany can access lucrative bonuses, including welcome packages up to several BTC,
                     no-wager free spins, and cashback offers. Popular games range from classic slots and live dealer tables to
-                    crypto-specific "Crash" games and Plinko, which are highly popular in the crypto gambling community.
+                    crypto-specific"Crash" games and Plinko, which are highly popular in the crypto gambling community.
                 </p>
             </section>
 

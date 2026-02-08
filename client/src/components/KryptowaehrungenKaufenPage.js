@@ -19,7 +19,7 @@ function KryptowaehrungenKaufenPage() {
     {
       step: 3,
       title: 'Wallet-Adresse eingeben',
-      description: 'Klicken Sie auf "Austauschen", geben Sie Ihre Wallet-Adresse ein und wählen Sie Ihre Zahlungsmethode (Visa/Mastercard).',
+      description: 'Klicken Sie auf"Austauschen", geben Sie Ihre Wallet-Adresse ein und wählen Sie Ihre Zahlungsmethode (Visa/Mastercard).',
     },
     {
       step: 4,

@@ -122,8 +122,7 @@ const ResponsibleGamingPage = () => {
           <p>Das wichtigste Merkmal des Glücksspiels: Genießen Sie das Erlebnis und behalten Sie gleichzeitig die Kontrolle.</p>
 
           <div className="hero-testimonial">
-            <blockquote>
-              "Denn wenn das Glücksspiel keinen Spaß mehr macht, kann dies auf eine Spielsucht hindeuten."
+            <blockquote>"Denn wenn das Glücksspiel keinen Spaß mehr macht, kann dies auf eine Spielsucht hindeuten."
             </blockquote>
             <div className="testimonial-author">
               <img src="/imported/responsible_assets/nico.webp" alt="Nico Steinbauer" />

@@ -33,7 +33,7 @@ function BonusOhneUmsatzbedingungenPage() {
     {
       rank: 3,
       name: '7bit Casino',
-      bonus: '30 Gratis Spins mit Code "30BOOK"',
+      bonus: '30 Gratis Spins mit Code"30BOOK"',
       features: [
         'Über 5.000 Spiele',
         'Curaçao Lizenz',

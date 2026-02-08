@@ -55,7 +55,7 @@ function KontaktPage() {
     },
     {
       question: 'Wie kann ich ein Casino zur Bewertung vorschlagen?',
-      answer: 'Schreiben Sie uns über das Kontaktformular mit dem Betreff "Casino Vorschlag" und wir prüfen den Anbieter.',
+      answer: 'Schreiben Sie uns über das Kontaktformular mit dem Betreff"Casino Vorschlag" und wir prüfen den Anbieter.',
     },
   ];
 
