@@ -1,226 +1,210 @@
 /* Global Overrides for Imported Elementor Pages */
 
 /* =========================================
-   1. GLOBAL RESET & LAYOUT FIXES
+   1. GLOBAL THEME & RESET
    ========================================= */
 
-/* Ensure the wrapper takes full width but no horizontal scroll */
+/* Force Dark Theme on Body and Wrapper */
+body,
 .imported-page-wrapper {
-    width: 100% !important;
-    max-width: 100vw !important;
-    overflow-x: hidden;
-    position: relative;
-    background-color: #fff;
-    /* Ensure default background */
-}
-
-/* Force body to not scroll horizontally */
-body {
+    background-color: var(--dark-bg, #0f1115) !important;
+    color: var(--light-text, #ffffff) !important;
     overflow-x: hidden;
     width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-/* Fix generic Elementor container widths */
+/* Override Elementor's white backgrounds */
+.elementor-section,
+.elementor-column,
+.elementor-widget,
+.e-con,
+.elementor-element {
+    background-color: transparent !important;
+}
+
+/* If specific sections need a slightly lighter dark background */
+.elementor-section.elementor-section-boxed,
+.e-con-boxed {
+    background-color: transparent !important;
+}
+
+/* =========================================
+   2. TYPOGRAPHY (Match ContentPages.css)
+   ========================================= */
+
+/* Headings */
+.imported-page-wrapper h1,
+.imported-page-wrapper h2,
+.imported-page-wrapper h3,
+.imported-page-wrapper h4,
+.imported-page-wrapper h5,
+.imported-page-wrapper h6,
+.elementor-heading-title {
+    color: var(--light-text, #ffffff) !important;
+    font-family: inherit;
+    /* Use site font */
+}
+
+.imported-page-wrapper h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.imported-page-wrapper h2 {
+    font-size: 28px;
+    margin-bottom: 18px;
+}
+
+.imported-page-wrapper h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* Paragraphs and Text */
+.imported-page-wrapper p,
+.imported-page-wrapper li,
+.imported-page-wrapper span,
+.elementor-text-editor {
+    color: var(--gray-text, #a0aec0) !important;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Links */
+.imported-page-wrapper a {
+    color: var(--primary-color, #f7931a) !important;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.imported-page-wrapper a:hover {
+    color: #ffd700 !important;
+}
+
+/* =========================================
+   3. LAYOUT & RESPONSIVENESS
+   ========================================= */
+
+/* Container Width Fixes */
 .elementor-section,
 .elementor-container,
-.e-con {
+.e-con,
+.e-con-inner,
+.elementor-row {
+    max-width: 100vw !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Restrict content width for readability on large screens */
+.page-content,
+.elementor-widget-text-editor,
+.entry-content {
+    max-width: 1200px;
+    /* Or 900px to match ContentPages.css if prefer narrow */
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+
+/* Remove fixed widths from inline styles */
+[style*="width"] {
+    width: auto !important;
     max-width: 100% !important;
 }
 
-/* Images should never overflow */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* =========================================
-   2. HERITAGE / HERO SECTION FIXES
-   ========================================= */
-
-/* Target the top-level sections to ensure they span full width */
-.elementor.elementor-29 .e-con.e-parent,
-.elementor-location-header .e-con.e-parent {
-    width: 100%;
-}
-
-/* Specific Hero Section Backgrounds (using the classes from ImportedHome.js) */
-.elementor-element-3907868f,
-.elementor-element-10ac1d81 {
+/* Fix Elementor's specific boxed layouts that cause overflow */
+.e-con-boxed {
     width: 100% !important;
-    background-size: cover !important;
-    background-position: center !important;
+    max-width: 100% !important;
 }
 
-/* Wrapper for content inside hero to keep it centered on large screens */
-.elementor-element-3907868f>.e-con-inner,
-.elementor-location-header .e-con-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 100%;
-}
-
-/* =========================================
-   3. TABLE / LIST ROWS (CASINO LIST)
-   ========================================= */
-
-/* The 'maintablerow' class seems to define the casino list entries */
-/* DESKTOP DEFAULT: Row layout */
-.maintablerow {
-    display: flex;
-    flex-wrap: nowrap;
-    /* Prevent wrapping on desktop unless necessary */
-    align-items: center;
-    padding: 15px 0;
-    border-bottom: 1px solid #eee;
-    width: 100%;
-    max-width: 1200px;
-    /* Constrain width on desktop */
-    margin: 0 auto;
-    /* Center the row */
-}
-
-/* Desktop Columns */
-.maintablerow>.e-con-child {
-    padding: 0 10px;
-    flex: 1;
-    /* Distribute space evenly by default */
+/* Images */
+img {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block;
 }
 
 /* =========================================
-   4. MOBILE RESPONSIVENESS (< 768px)
+   4. SPECIFIC COMPONENT FIXES
    ========================================= */
 
+/* Tables */
+table {
+    width: 100% !important;
+    max-width: 100% !important;
+    background: rgba(255, 255, 255, 0.05);
+    /* Match card style */
+    color: var(--light-text, #ffffff);
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Buttons */
+.elementor-button {
+    background-color: var(--primary-color, #f7931a) !important;
+    color: white !important;
+    border-radius: 8px !important;
+    padding: 12px 24px !important;
+    font-weight: bold !important;
+    text-transform: uppercase;
+    border: none !important;
+}
+
+.elementor-button:hover {
+    background-color: #e68a15 !important;
+    transform: translateY(-2px);
+}
+
+/* Cards / Boxes (Simulate .card style on Elementor inner sections) */
+.elementor-inner-section,
+.elementor-widget-container {
+    /* Optional: if you want to frame content like cards */
+    /* background: rgba(255, 255, 255, 0.02); */
+}
+
+/* Navbar / Header specifics */
+.elementor-location-header {
+    background: linear-gradient(135deg, var(--dark-bg, #0f1115) 0%, #1a1d24 100%) !important;
+    padding: 10px 0;
+}
+
+/* Mobile Menu Fixes */
 @media (max-width: 768px) {
-
-    /* 4.1 Layout Containers */
-    .elementor-section,
-    .e-con {
-        width: 100% !important;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-        box-sizing: border-box;
+    .elementor-nav-menu--dropdown {
+        background-color: var(--dark-bg, #0f1115) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    /* Inner containers need padding */
-    .e-con-inner {
-        padding-left: 15px !important;
-        padding-right: 15px !important;
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-
-    /* Remove specific heights that might break layout */
-    .elementor-widget-image {
-        height: auto !important;
-    }
-
-    /* 4.2 Casino List Rows - Stack Logic */
-    .maintablerow {
-        flex-direction: column !important;
-        /* Force column on mobile */
-        flex-wrap: wrap !important;
-        text-align: center;
-        padding: 20px 15px;
-        background: #fff;
-        margin-bottom: 20px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-        border-radius: 12px;
-        border: 1px solid #f0f0f0;
-        width: 95%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .maintablerow>.e-con-child {
-        width: 100% !important;
-        margin-bottom: 15px;
-        justify-content: center !important;
-        align-items: center !important;
-        padding: 0 !important;
-        flex: auto !important;
-        /* Reset flex */
-    }
-
-    /* 4.3 Typography Constraints */
-    h1,
-    .elementor-heading-title {
-        font-size: 1.6rem !important;
-        line-height: 1.3 !important;
-        word-wrap: break-word;
-    }
-
-    p {
-        font-size: 0.95rem !important;
-        line-height: 1.6 !important;
-    }
-
-    /* 4.4 Header / Navigation */
-    .elementor-location-header {
-        padding: 10px 0;
-    }
-
-    .elementor-nav-menu--toggle {
-        display: block !important;
-    }
-
-    /* 4.5 Specific Element Fixes */
-    .elementor-hidden-mobile {
-        display: none !important;
-    }
-
-    /* Center all buttons */
-    .elementor-button-wrapper {
-        text-align: center !important;
-        width: 100%;
-        margin-top: 10px;
-    }
-
-    .elementor-button {
-        width: 100%;
-        justify-content: center;
-        padding: 12px 20px !important;
-        font-size: 1rem !important;
-    }
-
-    /* Fix Logos in list */
-    .maintablerow img {
-        max-width: 140px !important;
-        margin: 0 auto;
-        display: block;
-    }
-
-    /* Fix Toggle/Accordion widget width */
-    .elementor-widget-toggle {
-        width: 100% !important;
+    .elementor-nav-menu--dropdown a {
+        color: white !important;
     }
 }
 
 /* =========================================
-   5. TABLET RESPONSIVENESS (768px - 1024px)
+   5. UTILITY & CLEANUP
    ========================================= */
 
-@media (min-width: 769px) and (max-width: 1024px) {
-    .e-con-inner {
-        max-width: 95%;
-    }
-
-    .maintablerow {
-        padding: 10px;
-        flex-wrap: wrap;
-        /* Allow wrap if needed on smaller tablets */
-    }
+/* Hide standard whitespace that Elementor adds */
+.elementor-spacer {
+    display: none !important;
 }
 
-/* =========================================
-   6. UTILITIES
-   ========================================= */
-
-/* Fix potential z-index issues */
-.elementor-element {
-    z-index: 1;
+.elementor-divider {
+    border-color: rgba(255, 255, 255, 0.1) !important;
 }
 
-/* Ensure dropdowns work or don't get hidden */
-.elementor-nav-menu__container {
-    overflow: visible !important;
+/* Fix vertical padding */
+.elementor-section {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
 }
