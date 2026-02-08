@@ -10,9 +10,10 @@ body,
     background-color: var(--dark-bg, #0f1115) !important;
     color: var(--light-text, #ffffff) !important;
     overflow-x: hidden;
-    width: 100%;
-    margin: 0;
-    padding: 0;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 /* Override Elementor's white backgrounds */
@@ -24,10 +25,34 @@ body,
     background-color: transparent !important;
 }
 
-/* If specific sections need a slightly lighter dark background */
-.elementor-section.elementor-section-boxed,
-.e-con-boxed {
-    background-color: transparent !important;
+/* Force full width on all containers */
+.elementor,
+.elementor-section,
+.e-con,
+.e-con-boxed,
+.elementor-section-boxed,
+.elementor-container {
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+/* Remove Elementor's default container width limits */
+.e-con-inner,
+.elementor-container {
+    max-width: 1200px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+
+/* Ensure page wrapper is full width */
+.imported-page-wrapper .page-content,
+.imported-page-wrapper .elementor {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 /* =========================================
