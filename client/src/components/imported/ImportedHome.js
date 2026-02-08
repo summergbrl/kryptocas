@@ -270,7 +270,7 @@ const ImportedHome = () => {
 
                                     {/* Action Button */}
                                     <div style={{ flex: '0 0 auto', width: '100%', maxWidth: '200px', margin: '0 auto' }}>
-                                        <a href={casino.link} target="_blank" rel="nofollow sponsored" className="elementor-button" style={{ width: '100%', textAlign: 'center', justifyContent: 'center' }}>
+                                        <a href={casino.link} target="_blank" rel="nofollow sponsored noreferrer" className="elementor-button" style={{ width: '100%', textAlign: 'center', justifyContent: 'center' }}>
                                             Spiel Jetzt
                                         </a>
                                     </div>
