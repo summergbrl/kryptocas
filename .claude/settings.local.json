@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(npm install:*)",
-      "WebFetch(domain:www.kryptocasinos.net)"
+      "WebFetch(domain:www.kryptocasinos.net)",
+      "Bash(ls:*)"
     ]
   }
 }

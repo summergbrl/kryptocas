@@ -6,7 +6,8 @@
    ========================================= */
 
 /* Ensure html and body are full width */
-html, body {
+html,
+body {
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 !important;
@@ -238,7 +239,8 @@ table {
     overflow-x: auto;
 }
 
-th, td {
+th,
+td {
     padding: 12px 15px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     text-align: left;
@@ -396,11 +398,68 @@ th {
     color: inherit !important;
 }
 
+/* Star Rating Specific Fixes - CRITICALLY IMPORTANT */
+/* Force the wrapper to lay out stars horizontally and not stretch */
+.e-rating-wrapper {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 2px !important;
+    width: auto !important;
+}
+
+/* Constrain the individual star container size absolutely */
+.e-rating .e-icon {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 20px !important;
+    height: 20px !important;
+    font-size: 20px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    flex-shrink: 0 !important;
+}
+
+/* Force the marked star wrapper to take full size */
+.e-rating .e-icon-wrapper.e-icon-marked {
+    display: flex !important;
+    width: 100% !important;
+    height: 100% !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: #f7931a !important;
+    /* Gold */
+}
+
+/* Hide the unmarked star wrapper completely */
+.e-rating .e-icon-wrapper.e-icon-unmarked {
+    display: none !important;
+}
+
+/* Force the SVG to fit the container and be gold */
+.e-rating svg {
+    width: 20px !important;
+    height: 20px !important;
+    min-width: 20px !important;
+    min-height: 20px !important;
+    max-width: 20px !important;
+    max-height: 20px !important;
+    fill: #f7931a !important;
+    display: block !important;
+}
+
+/* Ensure the star path itself uses the fill */
+.e-rating svg path {
+    fill: #f7931a !important;
+}
+
 /* =========================================
    15. MOBILE RESPONSIVENESS (< 768px)
    ========================================= */
 
 @media (max-width: 768px) {
+
     /* Full width on mobile */
     .imported-page-wrapper,
     .imported-page-wrapper .page-content,
@@ -491,6 +550,7 @@ th {
    ========================================= */
 
 @media (min-width: 769px) and (max-width: 1024px) {
+
     .e-con-inner,
     .elementor-container {
         padding-left: 20px !important;
@@ -503,6 +563,8 @@ th {
 
     .elementor-column {
         width: 50% !important;
+        max-width: 100% !important;
+        padding-bottom: 20px !important;
     }
 }
 
@@ -511,6 +573,7 @@ th {
    ========================================= */
 
 @media (min-width: 1400px) {
+
     .e-con-inner,
     .elementor-container {
         max-width: 1400px !important;
@@ -529,6 +592,7 @@ th {
 
 /* Disable animations on mobile for performance */
 @media (max-width: 768px) {
+
     .elementor-element,
     .elementor-widget {
         animation: none !important;

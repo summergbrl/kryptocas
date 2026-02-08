@@ -2,7 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import './components/imported/ImportedStylesOverride.css';
-// import NewHomePage from './components/NewHomePage';
+import ImportedHomePage from './components/imported/ImportedHomePage';
 import NewPrivacyPolicyPage from './components/NewPrivacyPolicyPage';
 import ResponsibleGamingPage from './components/ResponsibleGamingPage';
 import EthereumCasinosPage from './components/EthereumCasinosPage';
@@ -22,6 +22,7 @@ import ImpressumPage from './components/ImpressumPage';
 import KontaktPage from './components/KontaktPage';
 
 // --- MIGRATED IMPORTS ---
+// Trigger HMR update
 import ImportedHome from './components/imported/ImportedHome';
 import ImportedDatenschutzPage from './components/imported/ImportedDatenschutzPage';
 import ImportedTestsMbitPage from './components/imported/ImportedTestsMbitPage';
@@ -106,7 +107,7 @@ function App() {
     <div className="App">
       <Routes>
         {/* --- MIGRATED ROUTES --- */}
-        <Route path="/" element={<ImportedHome />} />
+        <Route path="/" element={<ImportedHomePage />} />
         <Route path="/datenschutz/" element={<ImportedDatenschutzPage />} />
         <Route path="/tests/mbit/" element={<ImportedTestsMbitPage />} />
         <Route path="/tests/arcanebet/" element={<ImportedTestsArcanebetPage />} />
@@ -186,7 +187,6 @@ function App() {
 
 
         {/* Main Pages */}
-        {/* <Route path="/" element={<NewHomePage />} /> */}
 
         {/* Casino Guide Pages */}
         <Route path="/ethereum-casinos" element={<EthereumCasinosPage />} />

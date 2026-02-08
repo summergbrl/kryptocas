@@ -13,15 +13,21 @@ function Header() {
     <header className="header">
       <div className="header-container container">
         <Link to="/" className="logo">
-          <img src="/images/logo.png" alt="Krypto Casinos" className="header-logo" />
+          <img src="/images/logo.png" alt="Kryptocasinos.net" className="header-logo" />
         </Link>
+
+        {/* Skip Link for Accessibility (User requested 'Zum Inhalt wechseln' which is usually a skip link) */}
+        <a href="#first_sec" className="skip-link" style={{ display: 'none' }}>Zum Inhalt wechseln</a>
 
         <nav className={`nav ${isMenuOpen ? 'active' : ''}`}>
           <ul className="nav-list">
-            <li><Link to="/" onClick={() => setIsMenuOpen(false)}>Home</Link></li>
-            <li><Link to="/casinos" onClick={() => setIsMenuOpen(false)}>Casinos</Link></li>
-            <li><Link to="/bonuses" onClick={() => setIsMenuOpen(false)}>Bonusse</Link></li>
-            <li><Link to="/guide" onClick={() => setIsMenuOpen(false)}>Leitfaden</Link></li>
+            <li><Link to="/" onClick={() => setIsMenuOpen(false)}>Krypto Casinos</Link></li>
+            <li><Link to="/krypto-casino-boni/" onClick={() => setIsMenuOpen(false)}>Casino Boni</Link></li>
+            <li><Link to="/bitcoin-casinos/" onClick={() => setIsMenuOpen(false)}>Bitcoin Casinos</Link></li>
+            <li><Link to="/krypto-casino-spiele/" onClick={() => setIsMenuOpen(false)}>Casino-Spiele</Link></li>
+            <li><Link to="/tests/" onClick={() => setIsMenuOpen(false)}>Casino Tests</Link></li>
+            <li><Link to="/krypto-wallets/" onClick={() => setIsMenuOpen(false)}>Krypto-Wallets</Link></li>
+            <li><Link to="/kryptowissen/" onClick={() => setIsMenuOpen(false)}>Kryptowissen</Link></li>
           </ul>
         </nav>
 
