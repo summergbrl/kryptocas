@@ -620,19 +620,224 @@ html {
    20. PRINT STYLES
    ========================================= */
 
-@media print {
-    .imported-page-wrapper {
-        background: white !important;
-        color: black !important;
+/* =========================================
+   21. CASINO LIST / TABLE ROW STYLING (.maintablerow)
+   ========================================= */
+
+/* Desktop Layout */
+.maintablerow {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 15px 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+    gap: 15px !important;
+}
+
+/* Ensure children take appropriate width on desktop */
+.maintablerow>.e-con-full {
+    width: auto !important;
+    flex-grow: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    /* Center align content in columns */
+}
+
+/* Specific Child Widths for Desktop to align columns */
+/* Logo Column */
+.maintablerow>.e-con-full:nth-child(1) {
+    width: 15% !important;
+    flex-grow: 0 !important;
+}
+
+/* Max Payout Column */
+.maintablerow>.e-con-full:nth-child(2) {
+    width: 15% !important;
+    flex-grow: 0 !important;
+}
+
+/* Rating Column */
+.maintablerow>.e-con-full:nth-child(3) {
+    width: 15% !important;
+    flex-grow: 0 !important;
+}
+
+/* Bonus Text Column */
+.maintablerow>.e-con-full:nth-child(4) {
+    width: 30% !important;
+    flex-grow: 1 !important;
+    text-align: center !important;
+}
+
+/* Button Column */
+.maintablerow>.e-con-full:nth-child(5) {
+    width: 15% !important;
+    flex-grow: 0 !important;
+}
+
+/* Toggle Column */
+.maintablerow>.e-con-full:nth-child(6) {
+    width: 10% !important;
+    flex-grow: 0 !important;
+}
+
+/* Mobile Layout (< 1024px) - Turn rows into Cards */
+@media (max-width: 1024px) {
+    .maintablerow {
+        flex-direction: column !important;
+        background: rgba(25, 27, 33, 0.8) !important;
+        border: 1px solid rgba(255, 255, 255, 0.05) !important;
+        border-radius: 16px !important;
+        margin-bottom: 20px !important;
+        padding: 25px !important;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
     }
 
-    .imported-page-wrapper h1,
-    .imported-page-wrapper h2,
-    .imported-page-wrapper h3 {
-        color: black !important;
+    /* Reset widths for mobile stack */
+    .maintablerow>.e-con-full {
+        width: 100% !important;
+        margin-bottom: 15px !important;
     }
 
-    .elementor-button {
-        display: none !important;
+    /* Remove bottom margin for the last item */
+    .maintablerow>.e-con-full:last-child {
+        margin-bottom: 0 !important;
+    }
+
+    /* Order Re-arrangement for Mobile Cards */
+    /* 1. Logo */
+    .maintablerow>.e-con-full:nth-child(1) {
+        order: 1;
+        margin-bottom: 20px !important;
+    }
+
+    /* 2. Rating */
+    .maintablerow>.e-con-full:nth-child(3) {
+        order: 2;
+        margin-bottom: 10px !important;
+    }
+
+    /* 3. Bonus Text */
+    .maintablerow>.e-con-full:nth-child(4) {
+        order: 3;
+        font-weight: bold !important;
+        font-size: 1.1em !important;
+        margin-bottom: 15px !important;
+    }
+
+    /* 4. Max Payout */
+    .maintablerow>.e-con-full:nth-child(2) {
+        order: 4;
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 10px;
+        justify-content: center !important;
+        opacity: 0.8;
+        font-size: 0.9em;
+    }
+
+    /* 5. Button */
+    .maintablerow>.e-con-full:nth-child(5) {
+        order: 5;
+        margin-top: 10px !important;
+    }
+
+    /* 6. Toggle */
+    .maintablerow>.e-con-full:nth-child(6) {
+        order: 6;
+        margin-top: 10px !important;
+    }
+
+    /* Button Full Width */
+    .maintablerow .elementor-button {
+        width: 100% !important;
+        padding: 16px !important;
+        font-size: 16px !important;
+    }
+
+    /* Center Stars on Mobile */
+    .e-rating-wrapper {
+        justify-content: center !important;
+    }
+}
+
+/* =========================================
+   22. MORE TEXT IMPROVEMENTS
+   ========================================= */
+
+/* Ensure text is readable */
+.elementor-widget-text-editor p {
+    margin-bottom: 15px !important;
+}
+
+/* Headings spacing */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 10px !important;
+}
+
+/* List Styling */
+ul {
+    padding-left: 20px !important;
+    margin-bottom: 20px !important;
+}
+
+li {
+    margin-bottom: 8px !important;
+}
+
+/* FAQ Accordions */
+.elementor-toggle-title {
+    color: var(--light-text, #ffffff) !important;
+    font-weight: 600 !important;
+    padding: 15px !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-radius: 8px !important;
+    margin-bottom: 5px !important;
+    display: block !important;
+    cursor: pointer !important;
+}
+
+.elementor-toggle-title:hover {
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: var(--primary-color, #f7931a) !important;
+}
+
+.elementor-tab-content {
+    padding: 20px !important;
+    background: rgba(0, 0, 0, 0.2) !important;
+    border-radius: 0 0 8px 8px !important;
+    margin-top: -5px !important;
+    margin-bottom: 15px !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    border-top: none !important;
+}
+
+/* =========================================
+   23. LOGO & HEADER TWEAKS
+   ========================================= */
+
+.header-logo {
+    max-height: 60px !important;
+    width: auto !important;
+}
+
+@media (max-width: 768px) {
+    .header-logo {
+        max-height: 40px !important;
+    }
+
+    /* Fix mobile menu toggle color */
+    .elementor-menu-toggle__icon--open,
+    .elementor-menu-toggle__icon--close {
+        fill: white !important;
+        color: white !important;
     }
 }
