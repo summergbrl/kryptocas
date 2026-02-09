@@ -57,33 +57,33 @@ body,
    ========================================= */
 
 /* Override ALL Elementor white backgrounds */
-.elementor-section,
-.elementor-column,
-.elementor-widget,
-.elementor-element,
-.e-con,
-.e-con-inner,
-.e-con-boxed,
-.elementor-section-boxed,
-.elementor-container,
-.elementor-row,
-.elementor-column-wrap,
-.elementor-widget-wrap {
+.kc-section,
+.kc-column,
+.kc-widget,
+.kc-element,
+.kc-flex-container,
+.kc-flex-inner,
+.kc-flex-boxed,
+.kc-section-boxed,
+.kc-container,
+.kc-row,
+.kc-column-wrap,
+.kc-widget-wrap {
     background-color: transparent !important;
 }
 
 /* Force ALL containers to full width */
-.elementor,
-.elementor-inner,
-.elementor-section,
-.elementor-section-wrap,
-.elementor-section-boxed,
-.elementor-section-full_width,
-.e-con,
-.e-con-boxed,
-.e-con-full,
-.elementor-container,
-.elementor-row {
+.kc,
+.kc-inner,
+.kc-section,
+.kc-section-wrap,
+.kc-section-boxed,
+.kc-section-full_width,
+.kc-flex-container,
+.kc-flex-boxed,
+.kc-flex-full,
+.kc-container,
+.kc-row {
     max-width: 100% !important;
     width: 100% !important;
     margin-left: 0 !important;
@@ -94,8 +94,8 @@ body,
 }
 
 /* Inner content containers - centered with max-width */
-.e-con-inner,
-.elementor-container {
+.kc-flex-inner,
+.kc-container {
     max-width: 1400px !important;
     width: 100% !important;
     margin-left: auto !important;
@@ -106,10 +106,10 @@ body,
 }
 
 /* Remove any forced widths from inline styles */
-.elementor-section[style*="width"],
-.elementor-container[style*="width"],
-.e-con[style*="width"],
-.e-con-inner[style*="width"] {
+.kc-section[style*="width"],
+.kc-container[style*="width"],
+.kc-flex-container[style*="width"],
+.kc-flex-inner[style*="width"] {
     width: 100% !important;
     max-width: 100% !important;
 }
@@ -125,7 +125,7 @@ body,
 .imported-page-wrapper h4,
 .imported-page-wrapper h5,
 .imported-page-wrapper h6,
-.elementor-heading-title {
+.kc-heading-title {
     color: var(--light-text, #ffffff) !important;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     line-height: 1.3;
@@ -133,19 +133,19 @@ body,
 }
 
 .imported-page-wrapper h1,
-.elementor-size-xxl {
+.kc-size-xxl {
     font-size: clamp(28px, 5vw, 42px) !important;
     margin-bottom: 20px;
 }
 
 .imported-page-wrapper h2,
-.elementor-size-xl {
+.kc-size-xl {
     font-size: clamp(24px, 4vw, 32px) !important;
     margin-bottom: 18px;
 }
 
 .imported-page-wrapper h3,
-.elementor-size-large {
+.kc-size-large {
     font-size: clamp(20px, 3vw, 26px) !important;
     margin-bottom: 15px;
 }
@@ -155,8 +155,8 @@ body,
 .imported-page-wrapper li,
 .imported-page-wrapper span,
 .imported-page-wrapper div,
-.elementor-text-editor,
-.elementor-widget-text-editor {
+.kc-text-editor,
+.kc-widget-text-editor {
     color: var(--gray-text, #a0aec0) !important;
     line-height: 1.7;
     font-size: clamp(14px, 2.5vw, 16px);
@@ -179,9 +179,9 @@ body,
    ========================================= */
 
 img,
-.elementor-image img,
-.elementor-widget-image img,
-.wp-post-image {
+.kc-image img,
+.kc-widget-image img,
+.kc-wp-post-image {
     max-width: 100% !important;
     width: auto !important;
     height: auto !important;
@@ -190,8 +190,8 @@ img,
 }
 
 /* Hero/banner images - full width */
-.elementor-section-full_width img,
-.e-con-full img {
+.kc-section-full_width img,
+.kc-flex-full img {
     width: 100% !important;
     max-width: 100% !important;
 }
@@ -200,9 +200,9 @@ img,
    5. BUTTONS
    ========================================= */
 
-.elementor-button,
-.elementor-button-link,
-a.elementor-button {
+.kc-button,
+.kc-button-link,
+a.kc-button {
     background: linear-gradient(135deg, var(--primary-color, #f7931a), #e08f1a) !important;
     color: white !important;
     border-radius: 8px !important;
@@ -216,8 +216,8 @@ a.elementor-button {
     font-size: clamp(12px, 2vw, 14px) !important;
 }
 
-.elementor-button:hover,
-.elementor-button-link:hover {
+.kc-button:hover,
+.kc-button-link:hover {
     background: linear-gradient(135deg, #e08f1a, #c77a15) !important;
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(247, 147, 26, 0.3);
@@ -256,16 +256,16 @@ th {
    7. CARDS & BOXES
    ========================================= */
 
-.elementor-widget-container {
+.kc-widget-container {
     width: 100% !important;
     box-sizing: border-box !important;
 }
 
 /* Casino cards, info boxes, etc */
-.elementor-flip-box,
-.elementor-icon-box,
-.elementor-testimonial,
-.elementor-cta {
+.kc-flip-box,
+.kc-icon-box,
+.kc-testimonial,
+.kc-cta {
     background: rgba(255, 255, 255, 0.03) !important;
     border-radius: 12px;
     padding: 20px;
@@ -277,21 +277,21 @@ th {
    ========================================= */
 
 /* Elementor columns */
-.elementor-row {
+.kc-row {
     display: flex !important;
     flex-wrap: wrap !important;
     width: 100% !important;
 }
 
-.elementor-column {
+.kc-column {
     width: 100% !important;
     max-width: 100% !important;
     box-sizing: border-box !important;
 }
 
 /* Grid layouts */
-.elementor-grid,
-.elementor-posts-container {
+.kc-grid,
+.kc-posts-container {
     display: grid !important;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
     gap: 20px !important;
@@ -303,24 +303,24 @@ th {
    ========================================= */
 
 /* Remove excessive padding/margins */
-.elementor-section {
+.kc-section {
     padding-top: 30px !important;
     padding-bottom: 30px !important;
     margin: 0 !important;
 }
 
 /* Remove spacers that create blank space */
-.elementor-widget-spacer {
+.kc-widget-spacer {
     display: none !important;
 }
 
 /* Reduce widget gaps */
-.elementor-widget:not(:last-child) {
+.kc-widget:not(:last-child) {
     margin-bottom: 15px !important;
 }
 
 /* Remove empty elements */
-.elementor-element:empty {
+.kc-element:empty {
     display: none !important;
 }
 
@@ -328,18 +328,18 @@ th {
    10. HEADER & NAVIGATION
    ========================================= */
 
-.elementor-location-header,
-.elementor-widget-nav-menu {
+.kc-location-header,
+.kc-widget-nav-menu {
     background: linear-gradient(135deg, var(--dark-bg, #0f1115) 0%, #1a1d24 100%) !important;
     width: 100% !important;
 }
 
-.elementor-nav-menu a {
+.kc-nav-menu a {
     color: white !important;
     font-weight: 500;
 }
 
-.elementor-nav-menu a:hover {
+.kc-nav-menu a:hover {
     color: var(--primary-color, #f7931a) !important;
 }
 
@@ -347,9 +347,9 @@ th {
 /* Global rule for this icon to prevent it from ever being huge */
 svg.fa-svg-chevron-down,
 .e-fas-chevron-down,
-.elementor-nav-menu .sub-arrow svg,
-.elementor-nav-menu svg.fa-svg-chevron-down,
-.elementor-nav-menu .e-font-icon-svg {
+.kc-nav-menu .sub-arrow svg,
+.kc-nav-menu svg.fa-svg-chevron-down,
+.kc-nav-menu .e-font-icon-svg {
     width: 1em !important;
     height: 1em !important;
     max-width: 14px !important;
@@ -364,9 +364,9 @@ svg.fa-svg-chevron-down,
 
     svg.fa-svg-chevron-down,
     .e-fas-chevron-down,
-    .elementor-nav-menu .sub-arrow svg,
-    .elementor-nav-menu svg.fa-svg-chevron-down,
-    .elementor-nav-menu .e-font-icon-svg {
+    .kc-nav-menu .sub-arrow svg,
+    .kc-nav-menu svg.fa-svg-chevron-down,
+    .kc-nav-menu .e-font-icon-svg {
         width: 14px !important;
         height: 14px !important;
         max-width: 14px !important;
@@ -374,8 +374,8 @@ svg.fa-svg-chevron-down,
 }
 
 /* Desktop Navigation Dropdowns */
-.elementor-nav-menu--main .sub-menu,
-.elementor-nav-menu--dropdown.elementor-nav-menu--dropdown {
+.kc-nav-menu--main .sub-menu,
+.kc-nav-menu--dropdown.kc-nav-menu--dropdown {
     background: linear-gradient(135deg, #1a1d24 0%, #0f1115 100%) !important;
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -384,8 +384,8 @@ svg.fa-svg-chevron-down,
     min-width: 220px !important;
 }
 
-.elementor-nav-menu--main .sub-menu a,
-.elementor-nav-menu--dropdown a {
+.kc-nav-menu--main .sub-menu a,
+.kc-nav-menu--dropdown a {
     color: white !important;
     padding: 12px 20px !important;
     display: block !important;
@@ -393,19 +393,19 @@ svg.fa-svg-chevron-down,
     transition: all 0.3s ease;
 }
 
-.elementor-nav-menu--main .sub-menu a:hover,
-.elementor-nav-menu--dropdown a:hover {
+.kc-nav-menu--main .sub-menu a:hover,
+.kc-nav-menu--dropdown a:hover {
     background: rgba(247, 147, 26, 0.1) !important;
     color: var(--primary-color, #f7931a) !important;
     padding-left: 25px !important;
 }
 
 /* Nested submenu styling */
-.elementor-nav-menu--main .sub-menu .sub-menu {
+.kc-nav-menu--main .sub-menu .sub-menu {
     background: #0f1115 !important;
 }
 
-.elementor-nav-menu--main .sub-menu .sub-menu a {
+.kc-nav-menu--main .sub-menu .sub-menu a {
     padding-left: 30px !important;
 }
 
@@ -413,7 +413,7 @@ svg.fa-svg-chevron-down,
    11. FOOTER
    ========================================= */
 
-.elementor-location-footer {
+.kc-location-footer {
     background-color: #0b0c10 !important;
     width: 100% !important;
     margin-top: auto;
@@ -423,8 +423,8 @@ svg.fa-svg-chevron-down,
    12. DIVIDERS & SEPARATORS
    ========================================= */
 
-.elementor-divider,
-.elementor-divider-separator {
+.kc-divider,
+.kc-divider-separator {
     border-color: rgba(255, 255, 255, 0.1) !important;
     width: 100% !important;
 }
@@ -433,9 +433,9 @@ svg.fa-svg-chevron-down,
    13. FORMS
    ========================================= */
 
-.elementor-form input,
-.elementor-form textarea,
-.elementor-form select {
+.kc-form input,
+.kc-form textarea,
+.kc-form select {
     background: rgba(255, 255, 255, 0.05) !important;
     border: 1px solid rgba(255, 255, 255, 0.15) !important;
     color: white !important;
@@ -445,8 +445,8 @@ svg.fa-svg-chevron-down,
     box-sizing: border-box !important;
 }
 
-.elementor-form input:focus,
-.elementor-form textarea:focus {
+.kc-form input:focus,
+.kc-form textarea:focus {
     border-color: var(--primary-color, #f7931a) !important;
     outline: none !important;
 }
@@ -455,12 +455,12 @@ svg.fa-svg-chevron-down,
    14. ICONS & RATINGS
    ========================================= */
 
-.elementor-icon,
-.elementor-star-rating {
+.kc-icon,
+.kc-star-rating {
     color: var(--primary-color, #f7931a) !important;
 }
 
-.elementor-icon i {
+.kc-icon i {
     color: inherit !important;
 }
 
@@ -529,10 +529,10 @@ svg.fa-svg-chevron-down,
     /* Full width on mobile */
     .imported-page-wrapper,
     .imported-page-wrapper .page-content,
-    .elementor-section,
-    .elementor-container,
-    .e-con,
-    .e-con-inner {
+    .kc-section,
+    .kc-container,
+    .kc-flex-container,
+    .kc-flex-inner {
         width: 100% !important;
         max-width: 100% !important;
         padding-left: 10px !important;
@@ -540,18 +540,18 @@ svg.fa-svg-chevron-down,
     }
 
     /* Stack columns on mobile */
-    .elementor-row {
+    .kc-row {
         flex-direction: column !important;
     }
 
-    .elementor-column {
+    .kc-column {
         width: 100% !important;
         max-width: 100% !important;
         margin-bottom: 20px !important;
     }
 
     /* Reduce section padding on mobile */
-    .elementor-section {
+    .kc-section {
         padding-top: 20px !important;
         padding-bottom: 20px !important;
     }
@@ -570,55 +570,55 @@ svg.fa-svg-chevron-down,
     }
 
     /* Full width buttons on mobile */
-    .elementor-button {
+    .kc-button {
         width: 100% !important;
         text-align: center !important;
         padding: 14px 20px !important;
     }
 
     /* Grid single column on mobile */
-    .elementor-grid {
+    .kc-grid {
         grid-template-columns: 1fr !important;
     }
 
     /* Mobile menu */
-    .elementor-nav-menu--dropdown {
+    .kc-nav-menu--dropdown {
         background-color: var(--dark-bg, #0f1115) !important;
         border: 1px solid rgba(255, 255, 255, 0.1);
         width: 100% !important;
     }
 
-    .elementor-nav-menu--dropdown a {
+    .kc-nav-menu--dropdown a {
         color: white !important;
         padding: 12px 15px !important;
         display: block !important;
     }
 
     /* Fix submenu background and spacing */
-    .elementor-nav-menu--dropdown .sub-menu {
+    .kc-nav-menu--dropdown .sub-menu {
         background: transparent !important;
         padding: 0 !important;
         margin: 0 !important;
     }
 
-    .elementor-nav-menu--dropdown .sub-menu a {
+    .kc-nav-menu--dropdown .sub-menu a {
         padding-left: 30px !important;
         background: rgba(255, 255, 255, 0.05) !important;
         border-left: 2px solid var(--primary-color, #f7931a);
     }
 
-    .elementor-nav-menu--dropdown .sub-menu .sub-menu a {
+    .kc-nav-menu--dropdown .sub-menu .sub-menu a {
         padding-left: 45px !important;
         background: rgba(255, 255, 255, 0.03) !important;
     }
 
     /* Hide submenu by default on mobile */
-    .elementor-nav-menu--dropdown .sub-menu {
+    .kc-nav-menu--dropdown .sub-menu {
         display: none;
     }
 
-    .elementor-nav-menu--dropdown .menu-item:hover>.sub-menu,
-    .elementor-nav-menu--dropdown .menu-item.current-menu-item>.sub-menu {
+    .kc-nav-menu--dropdown .menu-item:hover>.sub-menu,
+    .kc-nav-menu--dropdown .menu-item.current-menu-item>.sub-menu {
         display: block;
     }
 
@@ -630,9 +630,9 @@ svg.fa-svg-chevron-down,
     }
 
     /* Cards full width on mobile */
-    .elementor-flip-box,
-    .elementor-icon-box,
-    .elementor-testimonial {
+    .kc-flip-box,
+    .kc-icon-box,
+    .kc-testimonial {
         width: 100% !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
@@ -645,17 +645,17 @@ svg.fa-svg-chevron-down,
 
 @media (min-width: 769px) and (max-width: 1024px) {
 
-    .e-con-inner,
-    .elementor-container {
+    .kc-flex-inner,
+    .kc-container {
         padding-left: 20px !important;
         padding-right: 20px !important;
     }
 
-    .elementor-grid {
+    .kc-grid {
         grid-template-columns: repeat(2, 1fr) !important;
     }
 
-    .elementor-column {
+    .kc-column {
         width: 50% !important;
         max-width: 100% !important;
         padding-bottom: 20px !important;
@@ -668,8 +668,8 @@ svg.fa-svg-chevron-down,
 
 @media (min-width: 1400px) {
 
-    .e-con-inner,
-    .elementor-container {
+    .kc-flex-inner,
+    .kc-container {
         max-width: 1400px !important;
         padding-left: 30px !important;
         padding-right: 30px !important;
@@ -680,15 +680,15 @@ svg.fa-svg-chevron-down,
    18. ANIMATIONS & TRANSITIONS
    ========================================= */
 
-.elementor-element {
+.kc-element {
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 /* Disable animations on mobile for performance */
 @media (max-width: 768px) {
 
-    .elementor-element,
-    .elementor-widget {
+    .kc-element,
+    .kc-widget {
         animation: none !important;
         transition: none !important;
     }
@@ -700,8 +700,8 @@ svg.fa-svg-chevron-down,
 
 /* Prevent horizontal scroll */
 .imported-page-wrapper,
-.elementor,
-.elementor-section {
+.kc,
+.kc-section {
     overflow-x: hidden !important;
 }
 
@@ -730,7 +730,7 @@ html {
 }
 
 /* Ensure children take appropriate width on desktop */
-.maintablerow>.e-con-full {
+.maintablerow>.kc-flex-full {
     width: auto !important;
     flex-grow: 1 !important;
     display: flex !important;
@@ -742,38 +742,38 @@ html {
 
 /* Specific Child Widths for Desktop to align columns */
 /* Logo Column */
-.maintablerow>.e-con-full:nth-child(1) {
+.maintablerow>.kc-flex-full:nth-child(1) {
     width: 15% !important;
     flex-grow: 0 !important;
 }
 
 /* Max Payout Column */
-.maintablerow>.e-con-full:nth-child(2) {
+.maintablerow>.kc-flex-full:nth-child(2) {
     width: 15% !important;
     flex-grow: 0 !important;
 }
 
 /* Rating Column */
-.maintablerow>.e-con-full:nth-child(3) {
+.maintablerow>.kc-flex-full:nth-child(3) {
     width: 15% !important;
     flex-grow: 0 !important;
 }
 
 /* Bonus Text Column */
-.maintablerow>.e-con-full:nth-child(4) {
+.maintablerow>.kc-flex-full:nth-child(4) {
     width: 30% !important;
     flex-grow: 1 !important;
     text-align: center !important;
 }
 
 /* Button Column */
-.maintablerow>.e-con-full:nth-child(5) {
+.maintablerow>.kc-flex-full:nth-child(5) {
     width: 15% !important;
     flex-grow: 0 !important;
 }
 
 /* Toggle Column */
-.maintablerow>.e-con-full:nth-child(6) {
+.maintablerow>.kc-flex-full:nth-child(6) {
     width: 10% !important;
     flex-grow: 0 !important;
 }
@@ -791,31 +791,31 @@ html {
     }
 
     /* Reset widths for mobile stack */
-    .maintablerow>.e-con-full {
+    .maintablerow>.kc-flex-full {
         width: 100% !important;
         margin-bottom: 15px !important;
     }
 
     /* Remove bottom margin for the last item */
-    .maintablerow>.e-con-full:last-child {
+    .maintablerow>.kc-flex-full:last-child {
         margin-bottom: 0 !important;
     }
 
     /* Order Re-arrangement for Mobile Cards */
     /* 1. Logo */
-    .maintablerow>.e-con-full:nth-child(1) {
+    .maintablerow>.kc-flex-full:nth-child(1) {
         order: 1;
         margin-bottom: 20px !important;
     }
 
     /* 2. Rating */
-    .maintablerow>.e-con-full:nth-child(3) {
+    .maintablerow>.kc-flex-full:nth-child(3) {
         order: 2;
         margin-bottom: 10px !important;
     }
 
     /* 3. Bonus Text */
-    .maintablerow>.e-con-full:nth-child(4) {
+    .maintablerow>.kc-flex-full:nth-child(4) {
         order: 3;
         font-weight: 700 !important;
         font-size: 18px !important;
@@ -825,7 +825,7 @@ html {
     }
 
     /* 4. Max Payout */
-    .maintablerow>.e-con-full:nth-child(2) {
+    .maintablerow>.kc-flex-full:nth-child(2) {
         order: 4;
         display: flex !important;
         flex-direction: row !important;
@@ -836,20 +836,20 @@ html {
     }
 
     /* 5. Button */
-    .maintablerow>.e-con-full:nth-child(5) {
+    .maintablerow>.kc-flex-full:nth-child(5) {
         order: 5;
         margin-top: 10px !important;
     }
 
     /* 6. Toggle */
-    .maintablerow>.e-con-full:nth-child(6) {
+    .maintablerow>.kc-flex-full:nth-child(6) {
         order: 6;
         margin-top: 10px !important;
         width: 100% !important;
     }
 
     /* Ensure the toggle title itself is full width and looks like a secondary button */
-    .maintablerow .elementor-toggle-title {
+    .maintablerow .kc-toggle-title {
         text-align: center !important;
         background: rgba(255, 255, 255, 0.05) !important;
         border: 1px solid rgba(255, 255, 255, 0.1) !important;
@@ -858,7 +858,7 @@ html {
     }
 
     /* Button Full Width */
-    .maintablerow .elementor-button {
+    .maintablerow .kc-button {
         width: 100% !important;
         padding: 16px !important;
         font-size: 16px !important;
@@ -866,7 +866,7 @@ html {
     }
 
     /* Remove borders on mobile children to keep card clean */
-    .maintablerow>.e-con-full {
+    .maintablerow>.kc-flex-full {
         border: none !important;
         padding: 0 !important;
     }
@@ -882,7 +882,7 @@ html {
    ========================================= */
 
 /* Ensure text is readable */
-.elementor-widget-text-editor p {
+.kc-widget-text-editor p {
     margin-bottom: 15px !important;
 }
 
@@ -907,7 +907,7 @@ li {
 }
 
 /* FAQ Accordions */
-.elementor-toggle-title {
+.kc-toggle-title {
     color: var(--light-text, #ffffff) !important;
     font-weight: 600 !important;
     padding: 15px !important;
@@ -918,12 +918,12 @@ li {
     cursor: pointer !important;
 }
 
-.elementor-toggle-title:hover {
+.kc-toggle-title:hover {
     background: rgba(255, 255, 255, 0.08) !important;
     color: var(--primary-color, #f7931a) !important;
 }
 
-.elementor-tab-content {
+.kc-tab-content {
     padding: 20px !important;
     background: rgba(0, 0, 0, 0.2) !important;
     border-radius: 0 0 8px 8px !important;
@@ -948,8 +948,8 @@ li {
     }
 
     /* Fix mobile menu toggle color */
-    .elementor-menu-toggle__icon--open,
-    .elementor-menu-toggle__icon--close {
+    .kc-menu-toggle__icon--open,
+    .kc-menu-toggle__icon--close {
         fill: white !important;
         color: white !important;
     }
