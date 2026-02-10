@@ -22,6 +22,7 @@ import UeberUnsPage from './components/UeberUnsPage';
 import ImpressumPage from './components/ImpressumPage';
 import KontaktPage from './components/KontaktPage';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 // --- MIGRATED IMPORTS ---
 // Trigger HMR update
@@ -202,6 +203,7 @@ function App() {
         <Route path="/impressum" element={<ImpressumPage />} />
         <Route path="/kontakt" element={<KontaktPage />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

@@ -1,7 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import Header from './Header';
-import Footer from './Footer';
 import './UeberUnsPage.css';
 
 function UeberUnsPage() {
@@ -72,10 +70,7 @@ function UeberUnsPage() {
         <title>Über Uns | Deutsche Krypto Casinos</title>
         <meta name="description" content="Erfahren Sie mehr über Kryptocasinos.net – Ihre unabhängige Anlaufstelle für Krypto Casino Bewertungen, Tests und Informationen." />
       </Helmet>
-
-      <Header />
-
-      <div className="page-header">
+<div className="page-header">
         <div className="container">
           <h1>Über Uns</h1>
           <p>Ihre unabhängige Anlaufstelle für Krypto Casino Bewertungen und Informationen</p>
@@ -163,9 +158,7 @@ function UeberUnsPage() {
           </section>
         </div>
       </div>
-
-      <Footer />
-    </div>
+</div>
   );
 }
 

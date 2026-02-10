@@ -1,7 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import Header from './Header';
-import Footer from './Footer';
 import './CasinoTokensPage.css';
 
 function CasinoTokensPage() {
@@ -118,10 +116,7 @@ function CasinoTokensPage() {
         <title>Beste Casino Tokens in Deutschland 2025 | Deutsche Krypto Casinos</title>
         <meta name="description" content="Entdecken Sie die besten Casino Tokens in Deutschland. Exklusive Boni, schnelle Transaktionen und einzigartige Vorteile für Krypto-Spieler." />
       </Helmet>
-
-      <Header />
-
-      <div className="page-header">
+<div className="page-header">
         <div className="container">
           <h1>Casino Tokens</h1>
           <p>Casino Tokens sind ein großer Durchbruch mit verbesserten Vorteilen für Spieler im aktuellen iGaming Umfeld. Entdecken Sie die besten Token-basierten Casinos.</p>
@@ -227,9 +222,7 @@ function CasinoTokensPage() {
           </section>
         </div>
       </div>
-
-      <Footer />
-    </div>
+</div>
   );
 }
 

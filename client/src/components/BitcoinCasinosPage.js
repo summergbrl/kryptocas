@@ -1,7 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import Header from './Header';
-import Footer from './Footer';
 import './BitcoinCasinosPage.css';
 
 function BitcoinCasinosPage() {
@@ -57,10 +55,7 @@ function BitcoinCasinosPage() {
         <title>Bitcoin Casinos | Die besten BTC Casinos für Deutsche | Deutsche Krypto Casinos</title>
         <meta name="description" content="Entdecken Sie die besten Bitcoin Casinos für deutsche Spieler. Getestet und empfohlen. Schnelle Auszahlungen und großzügige Boni." />
       </Helmet>
-
-      <Header />
-
-      <div className="page-header">
+<div className="page-header">
         <div className="container">
           <h1>Bitcoin Casinos</h1>
           <p>Die besten Bitcoin Casinos für deutsche Spieler. Getestet, bewertet und empfohlen.</p>
@@ -158,9 +153,7 @@ function BitcoinCasinosPage() {
           </section>
         </div>
       </div>
-
-      <Footer />
-    </div>
+</div>
   );
 }
 

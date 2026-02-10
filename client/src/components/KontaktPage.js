@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import Header from './Header';
-import Footer from './Footer';
 import './KontaktPage.css';
 
 function KontaktPage() {
@@ -65,10 +63,7 @@ function KontaktPage() {
         <title>Kontakt | Deutsche Krypto Casinos</title>
         <meta name="description" content="Kontaktieren Sie das Team von Kryptocasinos.net. Wir freuen uns auf Ihre Fragen, Anregungen und Feedback." />
       </Helmet>
-
-      <Header />
-
-      <div className="page-header">
+<div className="page-header">
         <div className="container">
           <h1>Kontakt</h1>
           <p>Wir freuen uns auf Ihre Nachricht</p>
@@ -179,9 +174,7 @@ function KontaktPage() {
           </section>
         </div>
       </div>
-
-      <Footer />
-    </div>
+</div>
   );
 }
 

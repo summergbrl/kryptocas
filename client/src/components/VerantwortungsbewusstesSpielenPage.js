@@ -1,7 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import Header from './Header';
-import Footer from './Footer';
 import './VerantwortungsbewusstesSpielenPage.css';
 
 function VerantwortungsbewusstesSpielenPage() {
@@ -109,10 +107,7 @@ function VerantwortungsbewusstesSpielenPage() {
         <title>Verantwortungsbewusstes Spielen | Deutsche Krypto Casinos</title>
         <meta name="description" content="Erfahren Sie alles über verantwortungsbewusstes Spielen. Tipps, Warnsignale und Hilfsangebote für ein sicheres Spielerlebnis." />
       </Helmet>
-
-      <Header />
-
-      <div className="page-header">
+<div className="page-header">
         <div className="container">
           <h1>Verantwortungsbewusstes Spielen</h1>
           <p>Das wichtigste Merkmal des Glücksspiels: Genießen Sie das Erlebnis und behalten Sie gleichzeitig die Kontrolle.</p>
@@ -224,9 +219,7 @@ function VerantwortungsbewusstesSpielenPage() {
           </section>
         </div>
       </div>
-
-      <Footer />
-    </div>
+</div>
   );
 }
 

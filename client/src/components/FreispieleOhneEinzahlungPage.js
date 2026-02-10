@@ -1,7 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import Header from './Header';
-import Footer from './Footer';
 import './FreispieleOhneEinzahlungPage.css';
 
 function FreispieleOhneEinzahlungPage() {
@@ -93,10 +91,7 @@ function FreispieleOhneEinzahlungPage() {
         <title>Krypto Casino Freispiele ohne Einzahlung | Deutsche Krypto Casinos</title>
         <meta name="description" content="Entdecken Sie Krypto Casino Freispiele ohne Einzahlung. Spielen Sie kostenlos an beliebten Slots und gewinnen Sie echtes Geld ohne Risiko." />
       </Helmet>
-
-      <Header />
-
-      <div className="page-header">
+<div className="page-header">
         <div className="container">
           <h1>Krypto Casino Freispiele ohne Einzahlung</h1>
           <p>Erkunden Sie die Welt der Online-Casinos risikofrei mit kostenlosen Freispielen. Echte Gewinne ohne eigenes Geld einzusetzen.</p>
@@ -201,9 +196,7 @@ function FreispieleOhneEinzahlungPage() {
           </section>
         </div>
       </div>
-
-      <Footer />
-    </div>
+</div>
   );
 }
 

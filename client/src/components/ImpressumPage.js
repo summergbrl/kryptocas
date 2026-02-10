@@ -1,7 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import Header from './Header';
-import Footer from './Footer';
 import './ImpressumPage.css';
 
 function ImpressumPage() {
@@ -11,10 +9,7 @@ function ImpressumPage() {
         <title>Impressum | Deutsche Krypto Casinos</title>
         <meta name="description" content="Impressum und rechtliche Informationen zu Kryptocasinos.net" />
       </Helmet>
-
-      <Header />
-
-      <div className="page-header">
+<div className="page-header">
         <div className="container">
           <h1>Impressum</h1>
           <p>Rechtliche Informationen gemäß § 5 TMG</p>
@@ -120,9 +115,7 @@ function ImpressumPage() {
           </section>
         </div>
       </div>
-
-      <Footer />
-    </div>
+</div>
   );
 }
 

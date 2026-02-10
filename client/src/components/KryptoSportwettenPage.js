@@ -1,7 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import Header from './Header';
-import Footer from './Footer';
 import './KryptoSportwettenPage.css';
 
 function KryptoSportwettenPage() {
@@ -41,10 +39,7 @@ function KryptoSportwettenPage() {
         <title>Krypto Sportwetten 2026 | Die besten Bitcoin Wettanbieter | Deutsche Krypto Casinos</title>
         <meta name="description" content="Entdecken Sie die besten Krypto-Sportwetten 2026. Wetten Sie mit Bitcoin auf Fußball, eSports und mehr. Schnelle Auszahlungen und Top-Quoten." />
       </Helmet>
-
-      <Header />
-
-      <div className="page-header">
+<div className="page-header">
         <div className="container">
           <h1>Krypto Sportwetten 2026</h1>
           <p>Trends, Vorteile und die besten Wettanbieter für Bitcoin-Sportwetten.</p>
@@ -140,9 +135,7 @@ function KryptoSportwettenPage() {
           </section>
         </div>
       </div>
-
-      <Footer />
-    </div>
+</div>
   );
 }
 

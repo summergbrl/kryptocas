@@ -1,7 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import Header from './Header';
-import Footer from './Footer';
 import './BonusOhneUmsatzbedingungenPage.css';
 
 function BonusOhneUmsatzbedingungenPage() {
@@ -109,10 +107,7 @@ function BonusOhneUmsatzbedingungenPage() {
         <title>Krypto Casinos Bonus ohne Umsatzbedingungen 2026 | Deutsche Krypto Casinos</title>
         <meta name="description" content="Entdecken Sie Krypto Casino Boni ohne Umsatzbedingungen. Freispiele und Gratisguthaben ohne versteckte Anforderungen. Die besten Angebote 2026." />
       </Helmet>
-
-      <Header />
-
-      <div className="page-header">
+<div className="page-header">
         <div className="container">
           <h1>Krypto Casinos Bonus ohne Umsatzbedingungen</h1>
           <p>Wählen Sie das richtige Krypto Casino und setzen Sie auf Boni ohne Umsatzbedingungen, um das Meiste aus Ihrem Besuch herauszuholen.</p>
@@ -213,9 +208,7 @@ function BonusOhneUmsatzbedingungenPage() {
           </section>
         </div>
       </div>
-
-      <Footer />
-    </div>
+</div>
   );
 }
 

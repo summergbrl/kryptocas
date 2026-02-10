@@ -1,7 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import Header from './Header';
-import Footer from './Footer';
 import './BlockchainCasinosPage.css';
 
 function BlockchainCasinosPage() {
@@ -130,10 +128,7 @@ function BlockchainCasinosPage() {
         <title>Blockchain Casinos | Provably Fair Gaming | Deutsche Krypto Casinos</title>
         <meta name="description" content="Entdecken Sie Blockchain Casinos mit Provably Fair Technologie. Transparente, sichere und nachweislich faire Spiele auf der Blockchain." />
       </Helmet>
-
-      <Header />
-
-      <div className="page-header">
+<div className="page-header">
         <div className="container">
           <h1>Blockchain Casinos</h1>
           <p>Erleben Sie die Zukunft des Online-Glücksspiels mit transparenten, nachweislich fairen Spielen auf der Blockchain.</p>
@@ -240,9 +235,7 @@ function BlockchainCasinosPage() {
           </section>
         </div>
       </div>
-
-      <Footer />
-    </div>
+</div>
   );
 }
 

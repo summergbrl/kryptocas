@@ -1,7 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import Header from './Header';
-import Footer from './Footer';
 import './KryptowaehrungenKaufenPage.css';
 
 function KryptowaehrungenKaufenPage() {
@@ -96,10 +94,7 @@ function KryptowaehrungenKaufenPage() {
         <title>Kryptowährungen mit Visa kaufen | Bitcoin, Ethereum & mehr | Deutsche Krypto Casinos</title>
         <meta name="description" content="Kaufen Sie Bitcoin und andere Kryptowährungen schnell und einfach mit Visa oder Mastercard. Schritt-für-Schritt Anleitung und Tipps." />
       </Helmet>
-
-      <Header />
-
-      <div className="page-header">
+<div className="page-header">
         <div className="container">
           <h1>Kryptowährungen Kaufen</h1>
           <p>Kaufen Sie Bitcoin und andere Kryptowährungen schnell und problemlos mit Visa oder Mastercard.</p>
@@ -217,9 +212,7 @@ function KryptowaehrungenKaufenPage() {
           </section>
         </div>
       </div>
-
-      <Footer />
-    </div>
+</div>
   );
 }
 

@@ -1,7 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import Header from './Header';
-import Footer from './Footer';
 import './RippleCasinosPage.css';
 
 function RippleCasinosPage() {
@@ -127,10 +125,7 @@ function RippleCasinosPage() {
         <title>Beste Ripple Casinos 2025 | XRP Casino Vergleich | Deutsche Krypto Casinos</title>
         <meta name="description" content="Die besten Ripple (XRP) Casinos 2025 im Vergleich. Blitzschnelle Transaktionen, minimale Gebühren und höchste Sicherheit." />
       </Helmet>
-
-      <Header />
-
-      <div className="page-header">
+<div className="page-header">
         <div className="container">
           <h1>Ripple Casinos</h1>
           <p>Ripple (XRP) läutet die nächste Generation an Online Casinos ein. Entdecken Sie die besten Ripple Casinos mit blitzschnellen Transaktionen und minimalen Gebühren.</p>
@@ -288,9 +283,7 @@ function RippleCasinosPage() {
           </section>
         </div>
       </div>
-
-      <Footer />
-    </div>
+</div>
   );
 }
 

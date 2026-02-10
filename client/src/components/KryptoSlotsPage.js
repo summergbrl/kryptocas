@@ -1,7 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import Header from './Header';
-import Footer from './Footer';
 import './KryptoSlotsPage.css';
 
 function KryptoSlotsPage() {
@@ -49,10 +47,7 @@ function KryptoSlotsPage() {
         <title>Krypto-Slots: Anonym & mit Top-Boni spielen! | Deutsche Krypto Casinos</title>
         <meta name="description" content="Entdecken Sie die besten Krypto-Slots. Spielen Sie anonym mit Bitcoin und Ethereum. Exklusive Boni und schnelle Auszahlungen." />
       </Helmet>
-
-      <Header />
-
-      <div className="page-header">
+<div className="page-header">
         <div className="container">
           <h1>Krypto-Slots</h1>
           <p>Anonym spielen mit Top-Boni! Entdecken Sie die besten Bitcoin-Slots und exklusive Krypto-Bonusangebote.</p>
@@ -160,9 +155,7 @@ function KryptoSlotsPage() {
           </section>
         </div>
       </div>
-
-      <Footer />
-    </div>
+</div>
   );
 }
 

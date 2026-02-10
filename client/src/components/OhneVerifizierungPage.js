@@ -1,7 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import Header from './Header';
-import Footer from './Footer';
 import './OhneVerifizierungPage.css';
 
 function OhneVerifizierungPage() {
@@ -118,10 +116,7 @@ function OhneVerifizierungPage() {
         <title>Krypto Casinos Ohne Verifizierung | Anonym Spielen | Deutsche Krypto Casinos</title>
         <meta name="description" content="Spielen Sie anonym in Krypto Casinos ohne Verifizierung. Keine KYC, keine Dokumente, sofortiger Spielstart und schnelle Auszahlungen." />
       </Helmet>
-
-      <Header />
-
-      <div className="page-header">
+<div className="page-header">
         <div className="container">
           <h1>Krypto Casinos Ohne Verifizierung</h1>
           <p>Spielen Sie anonym ohne KYC-Prozess. Keine Dokumente, kein Warten – sofortiger Zugang zu allen Spielen.</p>
@@ -215,9 +210,7 @@ function OhneVerifizierungPage() {
           </section>
         </div>
       </div>
-
-      <Footer />
-    </div>
+</div>
   );
 }
 

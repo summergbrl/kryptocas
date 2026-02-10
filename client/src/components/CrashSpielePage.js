@@ -1,7 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import Header from './Header';
-import Footer from './Footer';
 import './CrashSpielePage.css';
 
 function CrashSpielePage() {
@@ -41,10 +39,7 @@ function CrashSpielePage() {
         <title>Crash Spiele | Die besten Krypto Crash Games | Deutsche Krypto Casinos</title>
         <meta name="description" content="Entdecken Sie die besten Crash Spiele in Krypto Casinos. Aviator, JetX und mehr mit Provably Fair Technologie." />
       </Helmet>
-
-      <Header />
-
-      <div className="page-header">
+<div className="page-header">
         <div className="container">
           <h1>Crash Spiele</h1>
           <p>Entdecken Sie die aufregendsten Crash Games in Krypto Casinos. Schnelle Action, niedrige Hausvorteile und Provably Fair Technologie.</p>
@@ -157,9 +152,7 @@ function CrashSpielePage() {
           </section>
         </div>
       </div>
-
-      <Footer />
-    </div>
+</div>
   );
 }
 

@@ -1,7 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import Header from './Header';
-import Footer from './Footer';
 import './KryptoWalletsPage.css';
 
 function KryptoWalletsPage() {
@@ -87,10 +85,7 @@ function KryptoWalletsPage() {
         <title>Beste Krypto Wallets für Casinos | Deutsche Krypto Casinos</title>
         <meta name="description" content="Entdecken Sie die besten Krypto-Wallets für Casino-Transaktionen. MetaMask, Trust Wallet, Ledger und mehr im Vergleich." />
       </Helmet>
-
-      <Header />
-
-      <div className="page-header">
+<div className="page-header">
         <div className="container">
           <h1>Krypto Wallets</h1>
           <p>Die besten Wallets für sichere Casino-Transaktionen. Vergleichen Sie Features, Sicherheit und Benutzerfreundlichkeit.</p>
@@ -196,9 +191,7 @@ function KryptoWalletsPage() {
           </section>
         </div>
       </div>
-
-      <Footer />
-    </div>
+</div>
   );
 }
 

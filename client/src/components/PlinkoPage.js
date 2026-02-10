@@ -1,7 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import Header from './Header';
-import Footer from './Footer';
 import './PlinkoPage.css';
 
 function PlinkoPage() {
@@ -45,10 +43,7 @@ function PlinkoPage() {
         <title>Plinko Krypto-Casino | Top Casinos mit Plinko | Deutsche Krypto Casinos</title>
         <meta name="description" content="Spielen Sie Plinko in den besten Krypto Casinos. Provably Fair Technologie, bis zu 10.000x Multiplikatoren und exklusive Boni." />
       </Helmet>
-
-      <Header />
-
-      <div className="page-header">
+<div className="page-header">
         <div className="container">
           <h1>Plinko Krypto-Casino</h1>
           <p>Entdecken Sie die besten Plinko-Spiele mit Provably Fair Technologie und aufregenden Multiplikatoren.</p>
@@ -145,9 +140,7 @@ function PlinkoPage() {
           </section>
         </div>
       </div>
-
-      <Footer />
-    </div>
+</div>
   );
 }
 

@@ -1,7 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import Header from './Header';
-import Footer from './Footer';
 import './SofortauszahlungPage.css';
 
 function SofortauszahlungPage() {
@@ -102,10 +100,7 @@ function SofortauszahlungPage() {
         <title>Krypto Casinos mit Sofortauszahlung | Deutsche Krypto Casinos</title>
         <meta name="description" content="Entdecken Sie Krypto Casinos mit Sofortauszahlung. Erhalten Sie Ihre Gewinne in Minuten statt Tagen. Die schnellsten Auszahlungen 2026." />
       </Helmet>
-
-      <Header />
-
-      <div className="page-header">
+<div className="page-header">
         <div className="container">
           <h1>Krypto Casinos mit Sofortauszahlung</h1>
           <p>Erhalten Sie Ihre Gewinne in Minuten statt Tagen. Die schnellsten Krypto Casinos für sofortige Auszahlungen.</p>
@@ -206,9 +201,7 @@ function SofortauszahlungPage() {
           </section>
         </div>
       </div>
-
-      <Footer />
-    </div>
+</div>
   );
 }
 

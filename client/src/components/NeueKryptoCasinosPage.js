@@ -1,7 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import Header from './Header';
-import Footer from './Footer';
 import './NeueKryptoCasinosPage.css';
 
 function NeueKryptoCasinosPage() {
@@ -113,7 +111,7 @@ function NeueKryptoCasinosPage() {
         <meta name="description" content="Entdecken Sie die besten neuen Krypto Casinos 2025 in Deutschland. Großzügige Boni, innovative Technologie und riesige Spielauswahl." />
       </Helmet>
 
-      <Header />
+
 
       <div className="page-header">
         <div className="container">
@@ -238,7 +236,7 @@ function NeueKryptoCasinosPage() {
         </div>
       </div>
 
-      <Footer />
+
     </div>
   );
 }

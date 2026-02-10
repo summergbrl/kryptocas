@@ -1,7 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import Header from './Header';
-import Footer from './Footer';
 import './CasinoReviewTemplate.css';
 
 function CasinoReviewTemplate({ casinoData }) {
@@ -35,10 +33,7 @@ function CasinoReviewTemplate({ casinoData }) {
         <title>{name} Bewertung & Test 2026 | Deutsche Krypto Casinos</title>
         <meta name="description" content={`${name} im Test: ${welcomeBonus}. Lesen Sie unsere ehrliche Bewertung mit Bonus-Details, Spielen und Auszahlungen.`} />
       </Helmet>
-
-      <Header />
-
-      <div className="review-hero">
+<div className="review-hero">
         <div className="container">
           <div className="review-hero-content">
             <div className="casino-badge">
@@ -207,9 +202,7 @@ function CasinoReviewTemplate({ casinoData }) {
           </section>
         </div>
       </div>
-
-      <Footer />
-    </div>
+</div>
   );
 }
 

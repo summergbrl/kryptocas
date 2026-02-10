@@ -1,7 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import Header from './Header';
-import Footer from './Footer';
 import './EthereumCasinosPage.css';
 
 function EthereumCasinosPage() {
@@ -116,10 +114,7 @@ function EthereumCasinosPage() {
         <title>Beste Ethereum Casinos 2025 | Deutsche Krypto Casinos</title>
         <meta name="description" content="Entdecken Sie die besten Ethereum Casinos 2025. Sofortige Transaktionen, niedrige Gebühren und höchste Sicherheit durch Blockchain-Technologie." />
       </Helmet>
-
-      <Header />
-
-      <div className="page-header">
+<div className="page-header">
         <div className="container">
           <h1>Beste Ethereum Casinos 2025</h1>
           <p>Entdecken Sie die Vorteile von Ethereum für Casino-Zahlungen: sofortige Transaktionen, verbesserte Sicherheit, niedrigere Gebühren und weltweite Verfügbarkeit.</p>
@@ -261,9 +256,7 @@ function EthereumCasinosPage() {
           </section>
         </div>
       </div>
-
-      <Footer />
-    </div>
+</div>
   );
 }
 

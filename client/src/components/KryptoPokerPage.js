@@ -1,7 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import Header from './Header';
-import Footer from './Footer';
 import './KryptoPokerPage.css';
 
 function KryptoPokerPage() {
@@ -105,10 +103,7 @@ function KryptoPokerPage() {
         <title>Krypto Poker – Die besten Poker Seiten im Überblick | Deutsche Krypto Casinos</title>
         <meta name="description" content="Entdecken Sie die besten Krypto Poker Seiten. Spielen Sie anonym mit Bitcoin und Ethereum. Provably Fair Technologie für faires Spiel." />
       </Helmet>
-
-      <Header />
-
-      <div className="page-header">
+<div className="page-header">
         <div className="container">
           <h1>Krypto Poker</h1>
           <p>Spielen Sie Poker mit Bitcoin, Ethereum und anderen Kryptowährungen. Schnelle Transaktionen, Anonymität und Provably Fair Technologie.</p>
@@ -256,9 +251,7 @@ function KryptoPokerPage() {
           </section>
         </div>
       </div>
-
-      <Footer />
-    </div>
+</div>
   );
 }
 
