@@ -1,6 +1,6 @@
-/* Improved Casino Table Styling */
+/* Premium Casino Table Styling - Blue Theme */
 
-/* Make the main container a flex row */
+/* Main Card Container */
 .kc-flex-full.maintablerow,
 .maintablerow.kc-flex-container,
 .maintablerow {
@@ -10,23 +10,20 @@
     align-items: center !important;
     justify-content: space-between !important;
     width: 100% !important;
-    padding: 15px !important;
-    border-radius: 8px !important;
-    background-color: #1e2538 !important;
-    margin-bottom: 20px !important;
-    gap: 10px !important;
+    padding: 25px 30px !important;
+    border-radius: 12px !important;
+    background-color: #050a14 !important;
+    /* Deep dark background */
+    margin-bottom: 10px !important;
+    /* Spacing before 'Mehr Info' */
+    gap: 20px !important;
     box-sizing: border-box !important;
-    border: 1px solid #2f3a52 !important;
+    border: 1px solid #1a2332 !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+    position: relative !important;
 }
 
-/* 
-   Target DIRECT child containers of the flex row.
-   The structure seems to be: 
-   .maintablerow > .kc-element-populated (or similar wrapper) > .kc-widget-wrap
-   BUT based on logs, maintablerow IS the flex container.
-   The columns are likely the immediate children divs.
-*/
-
+/* Columns */
 .maintablerow>.kc-element,
 .maintablerow>.elementor-column,
 .maintablerow>div {
@@ -40,112 +37,156 @@
     text-align: center !important;
 }
 
-/* Specific fix for stars container */
+/* 1. Logo Column (Left) */
+.maintablerow>div:nth-child(1) {
+    flex: 0 0 15% !important;
+}
+
+.maintablerow>div:nth-child(1) img {
+    max-width: 120px !important;
+    height: auto !important;
+    object-fit: contain !important;
+}
+
+/* 2. Payout Info (Center-Left) */
+.maintablerow>div:nth-child(2) {
+    flex: 0 0 15% !important;
+}
+
+/* Label "Max. Auszahlung" */
+.maintablerow>div:nth-child(2) h6,
+.maintablerow>div:nth-child(2) .kc-heading-title.kc-size-default {
+    font-size: 10px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    color: #8890a0 !important;
+    margin-bottom: 5px !important;
+    font-weight: 500 !important;
+}
+
+/* Value "Flexibel" / "Keine Limits" */
+.maintablerow>div:nth-child(2) .kc-heading-title:not(.kc-size-default),
+.maintablerow>div:nth-child(2) h3,
+.maintablerow>div:nth-child(2) h4 {
+    color: #fff !important;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+}
+
+/* 3. Rating Stars (Center) */
+.maintablerow>div:nth-child(3) {
+    flex: 0 0 15% !important;
+}
+
+/* Rating Number "98/100" */
+.maintablerow>div:nth-child(3) .kc-heading-title,
+.maintablerow>div:nth-child(3) h3 {
+    font-size: 24px !important;
+    font-weight: 800 !important;
+    color: #fff !important;
+    margin-bottom: 5px !important;
+}
+
+/* Stars */
 .maintablerow .kc-rating-wrapper,
 .maintablerow .elementor-star-rating__wrapper,
 .maintablerow .kc-star-rating {
     display: flex !important;
     flex-direction: row !important;
-    gap: 2px !important;
+    gap: 3px !important;
     justify-content: center !important;
     align-items: center !important;
 }
 
 .maintablerow i,
 .maintablerow svg {
-    display: inline-block !important;
+    font-size: 12px !important;
+    color: #ffc107 !important;
+    /* Gold */
+    fill: #ffc107 !important;
 }
 
-/* 1. Logo Column */
-.maintablerow>div:nth-child(1) {
-    flex: 0 0 15% !important;
-}
-
-.maintablerow>div:nth-child(1) img {
-    max-width: 100px !important;
-    height: auto !important;
-    object-fit: contain !important;
-}
-
-/* 2. Payout Info */
-.maintablerow>div:nth-child(2) {
-    flex: 0 0 15% !important;
-}
-
-.maintablerow h6.kc-heading-title {
-    font-size: 11px !important;
-    text-transform: uppercase !important;
-    color: #8890a0 !important;
-    margin-bottom: 4px !important;
-}
-
-.maintablerow .kc-heading-title {
-    color: #fff !important;
-    font-weight: 600 !important;
-}
-
-/* 3. Rating Stars */
-.maintablerow>div:nth-child(3) {
-    flex: 0 0 15% !important;
-}
-
-.kc-star-rating,
-.elementor-star-rating {
-    display: inline-flex !important;
-    color: #f0b90b !important;
-    gap: 2px !important;
-}
-
-.kc-star-rating i,
-.kc-star-rating svg,
-.elementor-star-rating i {
-    font-size: 14px !important;
-    color: #f0b90b !important;
-    fill: #f0b90b !important;
-}
-
-/* 4. Bonus Text */
+/* 4. Bonus Text (Center-Right) */
 .maintablerow>div:nth-child(4) {
-    flex: 0 0 35% !important;
+    flex: 0 0 30% !important;
+    text-align: left !important;
+    align-items: flex-start !important;
 }
 
 .maintablerow>div:nth-child(4) p,
-.maintablerow>div:nth-child(4) span {
-    font-size: 14px !important;
-    line-height: 1.3 !important;
-    color: #e0e0e0 !important;
+.maintablerow>div:nth-child(4) span,
+.maintablerow>div:nth-child(4) div {
+    font-size: 15px !important;
+    line-height: 1.4 !important;
+    color: #fff !important;
+    font-weight: 500 !important;
+    text-align: left !important;
 }
 
-/* 5. Buttons */
+/* 5. Button (Right) */
 .maintablerow>div:nth-child(5) {
     flex: 0 0 20% !important;
-    gap: 8px !important;
+    align-items: flex-end !important;
+    padding-right: 0 !important;
 }
 
-/* Button Styling Override */
+/* Blue Button Styling */
 .maintablerow .elementor-button,
 .maintablerow .kc-button,
 .maintablerow a.btn,
 .maintablerow a[class*="button"] {
-    background-color: #f0b90b !important;
-    color: #000 !important;
+    background-color: #007bff !important;
+    /* Bright Blue */
+    color: #fff !important;
     border: none !important;
-    border-radius: 4px !important;
-    padding: 8px 16px !important;
-    font-weight: bold !important;
-    text-transform: uppercase !important;
-    font-size: 13px !important;
+    border-radius: 50px !important;
+    /* Pill shape */
+    padding: 12px 24px !important;
+    font-weight: 700 !important;
+    text-transform: none !important;
+    /* Normal case usually looks better, or capitalize */
+    font-size: 14px !important;
     text-decoration: none !important;
-    display: inline-block !important;
-    width: 100% !important;
-    max-width: 160px !important;
-    text-align: center !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: auto !important;
+    min-width: 140px !important;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3) !important;
+    transition: all 0.3s ease !important;
 }
 
 .maintablerow .elementor-button:hover,
 .maintablerow .kc-button:hover {
-    background-color: #d6a40a !important;
-    transform: translateY(-1px);
+    background-color: #0069d9 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.4) !important;
+}
+
+/* Add arrow after button text if possible, typically needs pseudo-element if not in HTML */
+.maintablerow .elementor-button::after,
+.maintablerow .kc-button::after {
+    content: " >";
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+/* "Mehr Info" Link Styling */
+/* Assuming this follows immediately after the row */
+.centerme {
+    text-align: center !important;
+    margin-top: -5px !important;
+    margin-bottom: 30px !important;
+}
+
+.kc-toggle-title,
+.centerme a,
+.centerme span {
+    color: #007bff !important;
+    font-size: 12px !important;
+    text-decoration: underline !important;
+    cursor: pointer !important;
+    font-weight: 500 !important;
 }
 
 /* Mobile Layout */
@@ -153,40 +194,44 @@
     .maintablerow {
         flex-wrap: wrap !important;
         justify-content: center !important;
-        padding: 20px 10px !important;
-        position: relative !important;
+        padding: 20px 15px !important;
+        gap: 15px !important;
     }
 
     /* Logo top centered */
     .maintablerow>div:nth-child(1) {
         flex: 0 0 100% !important;
-        margin-bottom: 15px !important;
-    }
-
-    .maintablerow>div:nth-child(1) img {
-        max-width: 140px !important;
+        margin-bottom: 10px !important;
     }
 
     /* Payout and Rating side-by-side */
     .maintablerow>div:nth-child(2),
     .maintablerow>div:nth-child(3) {
         flex: 0 0 45% !important;
-        margin-bottom: 15px !important;
     }
 
-    /* Bonus full width */
+    /* Bonus full width centered */
     .maintablerow>div:nth-child(4) {
         flex: 0 0 100% !important;
-        margin-bottom: 15px !important;
-        background: rgba(255, 255, 255, 0.05) !important;
-        padding: 10px !important;
-        border-radius: 6px !important;
+        text-align: center !important;
+        align-items: center !important;
+        margin: 10px 0 !important;
+    }
+
+    .maintablerow>div:nth-child(4) p,
+    .maintablerow>div:nth-child(4) span {
+        text-align: center !important;
     }
 
     /* Buttons full width */
     .maintablerow>div:nth-child(5) {
         flex: 0 0 100% !important;
-        display: flex !important;
-        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .maintablerow .elementor-button,
+    .maintablerow .kc-button {
+        width: 100% !important;
+        max-width: 100% !important;
     }
 }
