@@ -45,7 +45,7 @@ body,
 }
 
 /* Page content container */
-.imported-page-wrapper .page-content {
+.imported-page-wrapper .kc-page-content {
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 !important;
@@ -345,11 +345,11 @@ th {
 
 /* Navigation Arrow / Chevron Icons Fix */
 /* Global rule for this icon to prevent it from ever being huge */
-svg.fa-svg-chevron-down,
-.e-fas-chevron-down,
-.kc-nav-menu .sub-arrow svg,
-.kc-nav-menu svg.fa-svg-chevron-down,
-.kc-nav-menu .e-font-icon-svg {
+svg.kc-svg-chevron-down,
+.kc-icon-chevron-down,
+.kc-nav-menu .kc-submenu-arrow svg,
+.kc-nav-menu svg.kc-svg-chevron-down,
+.kc-nav-menu .kc-svg-icon {
     width: 1em !important;
     height: 1em !important;
     max-width: 14px !important;
@@ -362,11 +362,11 @@ svg.fa-svg-chevron-down,
 
 @media (max-width: 768px) {
 
-    svg.fa-svg-chevron-down,
-    .e-fas-chevron-down,
-    .kc-nav-menu .sub-arrow svg,
-    .kc-nav-menu svg.fa-svg-chevron-down,
-    .kc-nav-menu .e-font-icon-svg {
+    svg.kc-svg-chevron-down,
+    .kc-icon-chevron-down,
+    .kc-nav-menu .kc-submenu-arrow svg,
+    .kc-nav-menu svg.kc-svg-chevron-down,
+    .kc-nav-menu .kc-svg-icon {
         width: 14px !important;
         height: 14px !important;
         max-width: 14px !important;
@@ -374,7 +374,7 @@ svg.fa-svg-chevron-down,
 }
 
 /* Desktop Navigation Dropdowns */
-.kc-nav-menu--main .sub-menu,
+.kc-nav-menu--main .kc-submenu,
 .kc-nav-menu--dropdown.kc-nav-menu--dropdown {
     background: linear-gradient(135deg, #1a1d24 0%, #0f1115 100%) !important;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -384,7 +384,7 @@ svg.fa-svg-chevron-down,
     min-width: 220px !important;
 }
 
-.kc-nav-menu--main .sub-menu a,
+.kc-nav-menu--main .kc-submenu a,
 .kc-nav-menu--dropdown a {
     color: white !important;
     padding: 12px 20px !important;
@@ -393,7 +393,7 @@ svg.fa-svg-chevron-down,
     transition: all 0.3s ease;
 }
 
-.kc-nav-menu--main .sub-menu a:hover,
+.kc-nav-menu--main .kc-submenu a:hover,
 .kc-nav-menu--dropdown a:hover {
     background: rgba(247, 147, 26, 0.1) !important;
     color: var(--primary-color, #f7931a) !important;
@@ -401,12 +401,117 @@ svg.fa-svg-chevron-down,
 }
 
 /* Nested submenu styling */
-.kc-nav-menu--main .sub-menu .sub-menu {
+.kc-nav-menu--main .kc-submenu .kc-submenu {
     background: #0f1115 !important;
 }
 
-.kc-nav-menu--main .sub-menu .sub-menu a {
+.kc-nav-menu--main .kc-submenu .kc-submenu a {
     padding-left: 30px !important;
+}
+
+/* === DESKTOP NAVIGATION LAYOUT === */
+/* Main navigation container */
+.kc-nav-menu--main {
+    display: flex !important;
+    flex-direction: row !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 0 !important;
+}
+
+.kc-nav-menu--main > li {
+    position: relative !important;
+    list-style: none !important;
+}
+
+.kc-nav-menu--main > li > a {
+    display: flex !important;
+    align-items: center !important;
+    padding: 15px 18px !important;
+    white-space: nowrap !important;
+}
+
+/* Dropdown positioning */
+.kc-nav-menu--main .kc-submenu {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    z-index: 9999 !important;
+    display: none !important;
+    list-style: none !important;
+    min-width: 220px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Show dropdown on hover */
+.kc-nav-menu--main > li:hover > .kc-submenu {
+    display: block !important;
+}
+
+/* Nested dropdown */
+.kc-nav-menu--main .kc-submenu .kc-submenu {
+    top: 0 !important;
+    left: 100% !important;
+}
+
+.kc-nav-menu--main .kc-submenu li:hover > .kc-submenu {
+    display: block !important;
+}
+
+/* Menu toggle button - hidden on desktop */
+.kc-menu-toggle {
+    display: none !important;
+}
+
+/* Dropdown container - hidden on desktop */
+.kc-nav-menu--dropdown {
+    display: none !important;
+}
+
+/* Nav menu widget layout */
+.kc-widget-nav-menu {
+    display: flex !important;
+    align-items: center !important;
+}
+
+.kc-nav-menu__container {
+    display: flex !important;
+    width: 100% !important;
+}
+
+/* Mobile responsive - show toggle, hide main nav */
+@media (max-width: 1024px) {
+    .kc-nav-menu--main {
+        display: none !important;
+    }
+
+    .kc-menu-toggle {
+        display: flex !important;
+        cursor: pointer !important;
+        padding: 10px !important;
+        color: white !important;
+    }
+
+    .kc-menu-toggle__icon--open {
+        display: block !important;
+    }
+
+    .kc-menu-toggle__icon--close {
+        display: none !important;
+    }
+
+    /* When menu is active */
+    .kc-nav-menu--dropdown.kc-nav-menu--dropdown {
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        right: 0 !important;
+        z-index: 9999 !important;
+        max-height: 80vh !important;
+        overflow-y: auto !important;
+    }
 }
 
 /* =========================================
@@ -466,7 +571,7 @@ svg.fa-svg-chevron-down,
 
 /* Star Rating Specific Fixes - CRITICALLY IMPORTANT */
 /* Force the wrapper to lay out stars horizontally and not stretch */
-.e-rating-wrapper {
+.kc-rating-wrapper {
     display: flex !important;
     align-items: center !important;
     justify-content: flex-start !important;
@@ -475,7 +580,7 @@ svg.fa-svg-chevron-down,
 }
 
 /* Constrain the individual star container size absolutely */
-.e-rating .e-icon {
+.kc-rating .kc-icon {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -488,7 +593,7 @@ svg.fa-svg-chevron-down,
 }
 
 /* Force the marked star wrapper to take full size */
-.e-rating .e-icon-wrapper.e-icon-marked {
+.kc-rating .kc-icon-wrapper.kc-icon-marked {
     display: flex !important;
     width: 100% !important;
     height: 100% !important;
@@ -499,12 +604,12 @@ svg.fa-svg-chevron-down,
 }
 
 /* Hide the unmarked star wrapper completely */
-.e-rating .e-icon-wrapper.e-icon-unmarked {
+.kc-rating .kc-icon-wrapper.kc-icon-unmarked {
     display: none !important;
 }
 
 /* Force the SVG to fit the container and be gold */
-.e-rating svg {
+.kc-rating svg {
     width: 20px !important;
     height: 20px !important;
     min-width: 20px !important;
@@ -516,7 +621,7 @@ svg.fa-svg-chevron-down,
 }
 
 /* Ensure the star path itself uses the fill */
-.e-rating svg path {
+.kc-rating svg path {
     fill: #f7931a !important;
 }
 
@@ -528,7 +633,7 @@ svg.fa-svg-chevron-down,
 
     /* Full width on mobile */
     .imported-page-wrapper,
-    .imported-page-wrapper .page-content,
+    .imported-page-wrapper .kc-page-content,
     .kc-section,
     .kc-container,
     .kc-flex-container,
@@ -595,30 +700,30 @@ svg.fa-svg-chevron-down,
     }
 
     /* Fix submenu background and spacing */
-    .kc-nav-menu--dropdown .sub-menu {
+    .kc-nav-menu--dropdown .kc-submenu {
         background: transparent !important;
         padding: 0 !important;
         margin: 0 !important;
     }
 
-    .kc-nav-menu--dropdown .sub-menu a {
+    .kc-nav-menu--dropdown .kc-submenu a {
         padding-left: 30px !important;
         background: rgba(255, 255, 255, 0.05) !important;
         border-left: 2px solid var(--primary-color, #f7931a);
     }
 
-    .kc-nav-menu--dropdown .sub-menu .sub-menu a {
+    .kc-nav-menu--dropdown .kc-submenu .kc-submenu a {
         padding-left: 45px !important;
         background: rgba(255, 255, 255, 0.03) !important;
     }
 
     /* Hide submenu by default on mobile */
-    .kc-nav-menu--dropdown .sub-menu {
+    .kc-nav-menu--dropdown .kc-submenu {
         display: none;
     }
 
-    .kc-nav-menu--dropdown .menu-item:hover>.sub-menu,
-    .kc-nav-menu--dropdown .menu-item.current-menu-item>.sub-menu {
+    .kc-nav-menu--dropdown .kc-menu-item:hover>.kc-submenu,
+    .kc-nav-menu--dropdown .kc-menu-item.current-menu-item>.kc-submenu {
         display: block;
     }
 
@@ -872,7 +977,7 @@ html {
     }
 
     /* Center Stars on Mobile */
-    .e-rating-wrapper {
+    .kc-rating-wrapper {
         justify-content: center !important;
     }
 }

@@ -1,0 +1,192 @@
+/* Improved Casino Table Styling */
+
+/* Make the main container a flex row */
+.kc-flex-full.maintablerow,
+.maintablerow.kc-flex-container,
+.maintablerow {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    padding: 15px !important;
+    border-radius: 8px !important;
+    background-color: #1e2538 !important;
+    margin-bottom: 20px !important;
+    gap: 10px !important;
+    box-sizing: border-box !important;
+    border: 1px solid #2f3a52 !important;
+}
+
+/* 
+   Target DIRECT child containers of the flex row.
+   The structure seems to be: 
+   .maintablerow > .kc-element-populated (or similar wrapper) > .kc-widget-wrap
+   BUT based on logs, maintablerow IS the flex container.
+   The columns are likely the immediate children divs.
+*/
+
+.maintablerow>.kc-element,
+.maintablerow>.elementor-column,
+.maintablerow>div {
+    width: auto !important;
+    margin: 0 !important;
+    padding: 0 10px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+}
+
+/* Specific fix for stars container */
+.maintablerow .kc-rating-wrapper,
+.maintablerow .elementor-star-rating__wrapper,
+.maintablerow .kc-star-rating {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 2px !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.maintablerow i,
+.maintablerow svg {
+    display: inline-block !important;
+}
+
+/* 1. Logo Column */
+.maintablerow>div:nth-child(1) {
+    flex: 0 0 15% !important;
+}
+
+.maintablerow>div:nth-child(1) img {
+    max-width: 100px !important;
+    height: auto !important;
+    object-fit: contain !important;
+}
+
+/* 2. Payout Info */
+.maintablerow>div:nth-child(2) {
+    flex: 0 0 15% !important;
+}
+
+.maintablerow h6.kc-heading-title {
+    font-size: 11px !important;
+    text-transform: uppercase !important;
+    color: #8890a0 !important;
+    margin-bottom: 4px !important;
+}
+
+.maintablerow .kc-heading-title {
+    color: #fff !important;
+    font-weight: 600 !important;
+}
+
+/* 3. Rating Stars */
+.maintablerow>div:nth-child(3) {
+    flex: 0 0 15% !important;
+}
+
+.kc-star-rating,
+.elementor-star-rating {
+    display: inline-flex !important;
+    color: #f0b90b !important;
+    gap: 2px !important;
+}
+
+.kc-star-rating i,
+.kc-star-rating svg,
+.elementor-star-rating i {
+    font-size: 14px !important;
+    color: #f0b90b !important;
+    fill: #f0b90b !important;
+}
+
+/* 4. Bonus Text */
+.maintablerow>div:nth-child(4) {
+    flex: 0 0 35% !important;
+}
+
+.maintablerow>div:nth-child(4) p,
+.maintablerow>div:nth-child(4) span {
+    font-size: 14px !important;
+    line-height: 1.3 !important;
+    color: #e0e0e0 !important;
+}
+
+/* 5. Buttons */
+.maintablerow>div:nth-child(5) {
+    flex: 0 0 20% !important;
+    gap: 8px !important;
+}
+
+/* Button Styling Override */
+.maintablerow .elementor-button,
+.maintablerow .kc-button,
+.maintablerow a.btn,
+.maintablerow a[class*="button"] {
+    background-color: #f0b90b !important;
+    color: #000 !important;
+    border: none !important;
+    border-radius: 4px !important;
+    padding: 8px 16px !important;
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+    font-size: 13px !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    width: 100% !important;
+    max-width: 160px !important;
+    text-align: center !important;
+}
+
+.maintablerow .elementor-button:hover,
+.maintablerow .kc-button:hover {
+    background-color: #d6a40a !important;
+    transform: translateY(-1px);
+}
+
+/* Mobile Layout */
+@media (max-width: 991px) {
+    .maintablerow {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        padding: 20px 10px !important;
+        position: relative !important;
+    }
+
+    /* Logo top centered */
+    .maintablerow>div:nth-child(1) {
+        flex: 0 0 100% !important;
+        margin-bottom: 15px !important;
+    }
+
+    .maintablerow>div:nth-child(1) img {
+        max-width: 140px !important;
+    }
+
+    /* Payout and Rating side-by-side */
+    .maintablerow>div:nth-child(2),
+    .maintablerow>div:nth-child(3) {
+        flex: 0 0 45% !important;
+        margin-bottom: 15px !important;
+    }
+
+    /* Bonus full width */
+    .maintablerow>div:nth-child(4) {
+        flex: 0 0 100% !important;
+        margin-bottom: 15px !important;
+        background: rgba(255, 255, 255, 0.05) !important;
+        padding: 10px !important;
+        border-radius: 6px !important;
+    }
+
+    /* Buttons full width */
+    .maintablerow>div:nth-child(5) {
+        flex: 0 0 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+}

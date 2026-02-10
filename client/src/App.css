@@ -19,7 +19,7 @@
 }
 
 /* Ensure all direct children are full width */
-.App > * {
+.App>* {
   width: 100%;
   max-width: 100%;
 }
@@ -51,4 +51,26 @@
   .content-wrapper {
     padding: 0 10px;
   }
+}
+
+/* Hide legacy Elementor/WordPress header embedded in imported HTML */
+[data-kc-type="header"],
+.kc-location-header,
+.kc-element[data-id="11a30e10"],
+.kc-element-11a30e10,
+.kc-nav-menu,
+.kc-menu-toggle,
+.kc-nav-menu__container,
+.kc-widget-nav-menu,
+[data-widget_type="nav-menu.default"],
+.kc-element-2eab7793,
+#kc-menu-2eab7793,
+ul.kc-nav-menu,
+.kc-nav-menu {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  width: 0 !important;
+  pointer-events: none !important;
+  overflow: hidden !important;
 }

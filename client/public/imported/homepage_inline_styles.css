@@ -478,46 +478,46 @@ span.elementor-button-text{color: #ffffff !important}
 /* Mobile responsive */
 @media (max-width: 768px) {
   /* Navigation - hide on mobile, show hamburger */
-  .elementor-nav-menu--main {
+  .kc-nav-menu--main {
     display: none !important;
   }
-  
-  .elementor-menu-toggle {
+
+  .kc-menu-toggle {
     display: flex !important;
   }
-  
+
   /* Stack content vertically */
-  .e-con.e-flex {
+  .kc-flex-container.kc-flex {
     flex-direction: column !important;
   }
-  
+
   /* Full width containers */
-  .e-con-inner {
+  .kc-flex-inner {
     width: 100% !important;
     padding: 0 15px !important;
   }
-  
+
   /* Responsive images */
   img {
     max-width: 100% !important;
     height: auto !important;
   }
-  
+
   /* Font size adjustments */
-  .elementor-heading-title {
+  .kc-heading-title {
     font-size: 1.5rem !important;
   }
-  
-  h1.elementor-heading-title {
+
+  h1.kc-heading-title {
     font-size: 1.8rem !important;
   }
-  
+
   /* Casino cards stack */
-  .e-grid {
+  .kc-grid {
     display: flex !important;
     flex-direction: column !important;
   }
-  
+
   /* Fix fixed width elements */
   [style*="width: 1519"] {
     width: 100% !important;
@@ -526,11 +526,11 @@ span.elementor-button-text{color: #ffffff !important}
 
 /* Tablet responsive */
 @media (max-width: 1024px) and (min-width: 769px) {
-  .e-con-inner {
+  .kc-flex-inner {
     padding: 0 20px !important;
   }
-  
-  .elementor-heading-title {
+
+  .kc-heading-title {
     font-size: 1.8rem !important;
   }
 }
