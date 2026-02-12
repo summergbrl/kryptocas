@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import BlogPostLayout from '../BlogPostLayout';
-import { Link } from 'react-router-dom';
+
 
 const ImportedKryptowissenMobileKryptoCasinos2025Page = () => {
     useEffect(() => {
@@ -59,7 +59,7 @@ const ImportedKryptowissenMobileKryptoCasinos2025Page = () => {
                         <div className="flex-grow text-center md:text-left">
                             <p className="mb-4">Es gibt kein anderes mobile Krypto Casino wie <a href="/tests/lucky-block-casino/" className="text-blue-400 hover:text-blue-300">Lucky Block</a> und sein eigener LBLOCK Token. Denn Lucky Block garantiert mobilen Spielern mit über 5.500 Spielen und Sportwetten, ein abwechslungsreiches und interessantes Krypto Erlebnis in Deutschland.</p>
                             <p className="mb-6">Nicht nur das, sondern neue Spieler erhalten auch einen enormen Willkommensbonus, sowie 15 % Cashback, während das mobile Krypto Casino viele Kryptowährungen für einfache Ein- und Auszahlungen verfügt, ohne dass man bei den blitzschnellen Auszahlungen eine KYC Verifizierung durchgehen muss.</p>
-                            <a href="https://www.luckyblock.com/de" target="_blank" rel="nofollow sponsored" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300">
+                            <a href="https://www.luckyblock.com/de" target="_blank" rel="nofollow sponsored noreferrer" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300">
                                 Jetzt Spielen
                             </a>
                         </div>
@@ -75,7 +75,7 @@ const ImportedKryptowissenMobileKryptoCasinos2025Page = () => {
                         <div className="flex-grow text-center md:text-left">
                             <p className="mb-4">Mit über 7.000 Spielen, einer nativen BCD Coin und täglichen Boni für deutsche Spieler ist <a href="/tests/bc-game/" className="text-blue-400 hover:text-blue-300">BC.Game</a> ein Gigant im aktuellen Krypto Gaming. Das Casino sorgt auch für vielseitige Zahlungsmethoden, indem es etwa 100 Kryptowährungen unterstützt. Von ihren Handys aus können mobile Kunden sofort exklusive Boni, tägliche Spins und VIP Vorteile erhalten.</p>
                             <p className="mb-6">Die einfache mobile Plattform von BC.Games bietet schnelle Auszahlungen und eine sehr einfache Navigation – sei es für Casino Spiele oder Sportwetten. Die Top Auswahl für Krypto Spieler kommt auch von den Provably Fair Spielen und mobilen Belohnungen.</p>
-                            <a href="https://bc.game/" target="_blank" rel="nofollow sponsored" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300">
+                            <a href="https://bc.game/" target="_blank" rel="nofollow sponsored noreferrer" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300">
                                 Jetzt Spielen
                             </a>
                         </div>
