@@ -95,6 +95,40 @@ import ImportedKryptowissenDerKostenloseTestWarumDeutscheSpielerNieEinzahlenBevo
 import ImportedKryptowissenKryptoCasinoBoni2026TrendsPage from './components/imported/ImportedKryptowissenKryptoCasinoBoni2026TrendsPage';
 
 function App() {
+  React.useEffect(() => {
+    // Global event listener for Elementor-style toggle widgets
+    const handleToggleClick = (e) => {
+      const toggleTitle = e.target.closest('.kc-tab-title');
+      if (!toggleTitle) return;
+
+      e.preventDefault();
+
+      const contentId = toggleTitle.getAttribute('aria-controls');
+      const content = document.getElementById(contentId);
+
+      if (content) {
+        const isExpanded = toggleTitle.getAttribute('aria-expanded') === 'true';
+
+        // Toggle state
+        toggleTitle.setAttribute('aria-expanded', !isExpanded);
+        toggleTitle.classList.toggle('kc-active');
+
+        // Toggle content visibility
+        if (isExpanded) {
+          content.style.display = 'none';
+        } else {
+          content.style.display = 'block';
+        }
+      }
+    };
+
+    document.addEventListener('click', handleToggleClick);
+
+    return () => {
+      document.removeEventListener('click', handleToggleClick);
+    };
+  }, []);
+
   return (
     <div className="App">
       <Header />
