@@ -29,7 +29,7 @@ import ImportedTestsArcanebetPage from './components/imported/ImportedTestsArcan
 import ImportedTestsJooPage from './components/imported/ImportedTestsJooPage';
 import ImportedTests1xbitPage from './components/imported/ImportedTests1xbitPage';
 
-import ImportedKryptoCasinoBoniKryptoCasinosBonusOhneUmsatzbedingungenPage from './components/imported/ImportedKryptoCasinoBoniKryptoCasinosBonusOhneUmsatzbedingungenPage';
+
 import ImportedRippleCasinosPage from './components/imported/ImportedRippleCasinosPage';
 import ImportedCasinoTokensPage from './components/imported/ImportedCasinoTokensPage';
 import ImportedEthereumCasinosPage from './components/imported/ImportedEthereumCasinosPage';
@@ -127,7 +127,7 @@ function App() {
         {/* Categories */}
         <Route path="/krypto-casino-boni" element={<ImportedKryptoCasinoBoniPage />} />
         <Route path="/krypto-casino-boni-ohne-einzahlung" element={<ImportedKryptoCasinoBoniOhneEinzahlungPage />} />
-        <Route path="/krypto-casino-boni/krypto-casinos-bonus-ohne-umsatzbedingungen" element={<ImportedKryptoCasinoBoniKryptoCasinosBonusOhneUmsatzbedingungenPage />} />
+
         <Route path="/7bit-bonus-ohne-einzahlung" element={<Imported7bitBonusOhneEinzahlungPage />} />
         <Route path="/bitkingz-bonus-ohne-einzahlung" element={<ImportedBitkingzBonusOhneEinzahlungPage />} />
         <Route path="/cryptoleo-bonus-ohne-einzahlung" element={<ImportedCryptoleoBonusOhneEinzahlungPage />} />
