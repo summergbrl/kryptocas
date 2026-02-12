@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet-async';
 const NewHomePage = () => {
   useEffect(() => {
     // Add specific body classes
-    const bodyClasses = "home kc-wp-singular page-template-default page page-id-29 kc-wp-embed-responsive kc-wp-theme-kc-theme cookies-not-set kc-theme-default kc-default kc-kit-394 kc-page kc-page-29 kc--ua-blink kc--ua-chrome kc--ua-webkit".split(' ');
+    const bodyClasses = "home page cookies-not-set kc-theme-default kc-default kc-kit-394 kc-page kc--ua-blink kc--ua-chrome kc--ua-webkit".split(' ');
     document.body.classList.add(...bodyClasses);
 
     return () => {

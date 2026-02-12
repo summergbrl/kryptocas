@@ -1,0 +1,79 @@
+/* Global fix for Star Ratings on imported pages */
+/* The imported pages use .kc-rating classes but the original CSS targeted .e-rating */
+
+.kc-widget-rating {
+    --e-rating-gap: 2px;
+    --e-rating-icon-font-size: 20px;
+    /* Larger */
+    --e-rating-icon-color: #555555;
+    /* Darker grey for empty stars background */
+    --e-rating-icon-marked-color: #FFD700;
+    /* Bright Gold */
+    --e-rating-icon-marked-width: 100%;
+    --e-rating-justify-content: center;
+    /* Center the stars */
+    text-align: center;
+    /* Ensure no text-align interference */
+}
+
+/* Container flex */
+.kc-widget-rating .kc-rating {
+    display: flex;
+    justify-content: var(--e-rating-justify-content);
+    align-items: center;
+    margin: 10px 0;
+    /* Add some vertical spacing */
+}
+
+.kc-widget-rating .kc-rating-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: inherit;
+    width: fit-content;
+}
+
+/* Each star container */
+.kc-widget-rating .kc-rating .kc-icon {
+    position: relative;
+    margin-right: var(--e-rating-gap);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* The filled star (overlay) */
+.kc-widget-rating .kc-rating .kc-icon-wrapper.kc-icon-marked {
+    color: var(--e-rating-icon-marked-color);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: var(--e-rating-icon-marked-width);
+    z-index: 2;
+    /* Higher than unmarked */
+    display: flex;
+}
+
+/* The empty star (background) */
+.kc-widget-rating .kc-rating .kc-icon-wrapper.kc-icon-unmarked {
+    color: var(--e-rating-icon-color);
+    display: flex;
+    z-index: 1;
+}
+
+/* SVG Styling */
+.kc-widget-rating .kc-rating .kc-icon-wrapper svg {
+    height: var(--e-rating-icon-font-size);
+    width: var(--e-rating-icon-font-size);
+    fill: currentColor !important;
+    /* Force color apply */
+    display: block;
+}
+
+/* Ensure header text inside rating widget is aligned if present */
+.kc-widget-rating .kc-heading-title {
+    margin: 0 10px 0 0;
+    /* Add formatting if it appears next to stars */
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import './components/CasinoTable.css';
+import './components/imported/StarRatingFix.css'; // Global fix for star ratings
 
 import NewHomePage from './components/NewHomePage';
 import NewPrivacyPolicyPage from './components/NewPrivacyPolicyPage';
