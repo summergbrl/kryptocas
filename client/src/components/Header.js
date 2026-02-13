@@ -31,7 +31,7 @@ const Header = () => {
             <div className="kc-react-header-container">
                 <div className="kc-react-logo">
                     <Link to="/">
-                        <img src="/imported/images/logogrm-1.png" alt="KryptoCasinos Logo" className="kc-react-logo-img" />
+                        <img src="/imported/images/logo.png" alt="KryptoCasinos" className="kc-react-logo-img" />
                     </Link>
                 </div>
 
@@ -45,9 +45,12 @@ const Header = () => {
                     <ul className="kc-react-menu">
                         <li className={`kc-react-menu-item ${activeDropdown === 1 ? 'active' : ''}`}>
                             <div className="kc-react-menu-link-wrapper">
-                                <Link to="/krypto-casino-boni" className="kc-react-menu-link" onClick={() => toggleDropdown(1)}>
-                                    Casino Boni <span className="kc-react-arrow">▼</span>
+                                <Link to="/krypto-casino-boni" className="kc-react-menu-link">
+                                    Casino Boni
                                 </Link>
+                                <button className="kc-react-dropdown-toggle" onClick={(e) => { e.preventDefault(); toggleDropdown(1); }} aria-label="Toggle submenu">
+                                    <span className={`kc-react-arrow ${activeDropdown === 1 ? 'rotated' : ''}`}>▼</span>
+                                </button>
                             </div>
                             <ul className={`kc-react-submenu ${activeDropdown === 1 ? 'open' : ''}`}>
                                 <li className="kc-react-submenu-item">
@@ -68,9 +71,12 @@ const Header = () => {
 
                         <li className={`kc-react-menu-item ${activeDropdown === 2 ? 'active' : ''}`}>
                             <div className="kc-react-menu-link-wrapper">
-                                <Link to="/krypto-casino-spiele" className="kc-react-menu-link" onClick={() => toggleDropdown(2)}>
-                                    Casino-Spiele <span className="kc-react-arrow">▼</span>
+                                <Link to="/krypto-casino-spiele" className="kc-react-menu-link">
+                                    Casino-Spiele
                                 </Link>
+                                <button className="kc-react-dropdown-toggle" onClick={(e) => { e.preventDefault(); toggleDropdown(2); }} aria-label="Toggle submenu">
+                                    <span className={`kc-react-arrow ${activeDropdown === 2 ? 'rotated' : ''}`}>▼</span>
+                                </button>
                             </div>
                             <ul className={`kc-react-submenu ${activeDropdown === 2 ? 'open' : ''}`}>
                                 <li className="kc-react-submenu-item"><Link to="/krypto-slots">Krypto-Slots</Link></li>
@@ -83,9 +89,12 @@ const Header = () => {
 
                         <li className={`kc-react-menu-item ${activeDropdown === 3 ? 'active' : ''}`}>
                             <div className="kc-react-menu-link-wrapper">
-                                <Link to="/tests" className="kc-react-menu-link" onClick={() => toggleDropdown(3)}>
-                                    Casino Tests <span className="kc-react-arrow">▼</span>
+                                <Link to="/tests" className="kc-react-menu-link">
+                                    Casino Tests
                                 </Link>
+                                <button className="kc-react-dropdown-toggle" onClick={(e) => { e.preventDefault(); toggleDropdown(3); }} aria-label="Toggle submenu">
+                                    <span className={`kc-react-arrow ${activeDropdown === 3 ? 'rotated' : ''}`}>▼</span>
+                                </button>
                             </div>
                             <ul className={`kc-react-submenu ${activeDropdown === 3 ? 'open' : ''}`}>
                                 <li className="kc-react-submenu-item"><Link to="/tests/flush-casino">Flush Casino</Link></li>
@@ -97,9 +106,12 @@ const Header = () => {
 
                         <li className={`kc-react-menu-item ${activeDropdown === 4 ? 'active' : ''}`}>
                             <div className="kc-react-menu-link-wrapper">
-                                <Link to="/krypto-wallets" className="kc-react-menu-link" onClick={() => toggleDropdown(4)}>
-                                    Krypto-Wallets <span className="kc-react-arrow">▼</span>
+                                <Link to="/krypto-wallets" className="kc-react-menu-link">
+                                    Krypto-Wallets
                                 </Link>
+                                <button className="kc-react-dropdown-toggle" onClick={(e) => { e.preventDefault(); toggleDropdown(4); }} aria-label="Toggle submenu">
+                                    <span className={`kc-react-arrow ${activeDropdown === 4 ? 'rotated' : ''}`}>▼</span>
+                                </button>
                             </div>
                             <ul className={`kc-react-submenu ${activeDropdown === 4 ? 'open' : ''}`}>
                                 <li className="kc-react-submenu-item"><Link to="/krypto-wallets/metamask">MetaMask</Link></li>
